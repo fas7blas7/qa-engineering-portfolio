@@ -1,5 +1,4 @@
-# API Test Automation Framework (2026 QA Comeback)
-
+# API Test Automation Framework
 ## Overview
 
 This project is an API testing automation framework built as part of my QA engineering portfolio.
