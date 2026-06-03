@@ -1,4 +1,7 @@
 # API Test Automation Framework
+
+![API CI Pipeline](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/api-ci.yml/badge.svg)
+
 ## Overview
 
 This project is an API testing automation framework built as part of my QA engineering portfolio.
