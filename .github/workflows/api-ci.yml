@@ -21,7 +21,7 @@ jobs:
         run: docker compose up -d --build
 
       - name: Wait for API
-        run: sleep 10
+        run: sleep 15
 
       - name: Install Newman
         run: npm install -g newman newman-reporter-htmlextra
@@ -31,6 +31,7 @@ jobs:
           newman run newman/collections/reqres.json \
             -e newman/environments/reqres.env.json \
             -r htmlextra \
+            --verbose \
             --reporter-htmlextra-export newman/reports/report.html
 
       - name: Shutdown Docker
