@@ -1,0 +1,52 @@
+name: API Automation CI (Newman + Docker)
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  api-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Newman + HTML Reporter
+        run: |
+          npm install -g newman newman-reporter-htmlextra
+
+      - name: Start API with Docker Compose
+        run: |
+          docker compose up -d --build
+
+      - name: Wait for API to be ready
+        run: sleep 10
+
+      - name: Create reports folder
+        run: mkdir -p 02-api-qa/dockerized-api-qa/newman/reports
+
+      - name: Run Newman tests
+        run: |
+          cd 02-api-qa/dockerized-api-qa
+
+          newman run newman/collections/reqres.json \
+            -e newman/environments/reqres.env.json \
+            -r htmlextra \
+            --reporter-htmlextra-export newman/reports/report.html
+
+      - name: Upload HTML report
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-test-report
+          path: 02-api-qa/dockerized-api-qa/newman/reports/report.html
+
+      - name: Shutdown containers
+        if: always()
+        run: docker compose down
