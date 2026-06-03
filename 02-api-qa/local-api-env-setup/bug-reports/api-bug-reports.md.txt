@@ -1,0 +1,47 @@
+# 🐞 API Bug Reports — ReqRes API
+
+---
+
+## BUG-001 — Generic Error Message Returned for Invalid Password
+
+### Environment
+
+Postman / ReqRes API
+
+### Severity
+
+Low
+
+### Priority
+
+Low
+
+### Preconditions
+
+API endpoint is accessible.
+
+### Steps to Reproduce
+
+1. Send POST request to:
+   `/api/login`
+
+2. Use:
+
+```json
+{
+  "email": "eve.holt@reqres.in",
+  "password": "wrongpassword"
+}
+```
+
+### Expected Result
+
+API returns specific error message related to invalid password.
+
+### Actual Result
+
+API returns generic authentication-related message.
+
+### Notes
+
+ReqRes is a mock API, so behavior may be limited compared to real backend validation.

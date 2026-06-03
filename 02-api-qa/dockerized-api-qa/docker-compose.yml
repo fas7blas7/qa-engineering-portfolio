@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  api:
+    build: ./api
+    container_name: api
+    ports:
+      - "3000:3000"
+
+  newman:
+    image: postman/newman
+    container_name: newman
+    depends_on:
+      - api
+    volumes:
+      - ./newman:/etc/newman
+      - ./reports:/etc/reports
+    command: >
+      run /etc/newman/collections/reqres-collection.json
+      -e /etc/newman/reqres-environment.json
+      -r cli,htmlextra
+      --reporter-htmlextra-export /etc/reports/report.html
