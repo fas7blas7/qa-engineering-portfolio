@@ -17,8 +17,23 @@ jobs:
         working-directory: 02-api-qa/dockerized-api-qa
         run: docker compose up -d --build
 
-      - name: Wait for API to start
-        run: sleep 15
+      - name: Wait for API health check
+        working-directory: 02-api-qa/dockerized-api-qa
+        run: |
+          echo "Waiting for API to be ready..."
+
+          for i in {1..20}; do
+            if curl -s http://localhost:3000/ >/dev/null; then
+              echo "API is ready!"
+              exit 0
+            fi
+
+            echo "Waiting... ($i)"
+            sleep 2
+          done
+
+          echo "API failed to start"
+          exit 1
 
       - name: Run Newman tests (inside Docker network)
         working-directory: 02-api-qa/dockerized-api-qa
