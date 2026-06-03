@@ -18,5 +18,4 @@ services:
     command: >
       run /etc/newman/collections/reqres.json
       -e /etc/newman/environments/reqres.env.json
-      -r cli,htmlextra
-      --reporter-htmlextra-export /etc/reports/report.html
+      -r cli
