@@ -9,31 +9,23 @@ jobs:
   api-tests:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: 02-api-qa/dockerized-api-qa
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Start API with Docker
+      - name: Start Docker environment
+        working-directory: 02-api-qa/dockerized-api-qa
         run: docker compose up -d --build
 
-      - name: Wait for API
+      - name: Wait for API to start
         run: sleep 15
 
-      - name: Install Newman
-        run: npm install -g newman newman-reporter-htmlextra
-
-      - name: Run API tests
+      - name: Run Newman tests (inside Docker network)
+        working-directory: 02-api-qa/dockerized-api-qa
         run: |
-          newman run newman/collections/reqres.json \
-            -e newman/environments/reqres.env.json \
-            -r cli,htmlextra \
-            --verbose \
-            --bail
+          docker compose run --rm newman
 
-      - name: Shutdown Docker
+      - name: Shutdown Docker environment
         if: always()
+        working-directory: 02-api-qa/dockerized-api-qa
         run: docker compose down
