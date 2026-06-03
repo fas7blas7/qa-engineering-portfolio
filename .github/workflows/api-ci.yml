@@ -30,9 +30,9 @@ jobs:
         run: |
           newman run newman/collections/reqres.json \
             -e newman/environments/reqres.env.json \
-            -r htmlextra \
+            -r cli,htmlextra \
             --verbose \
-            --reporter-htmlextra-export newman/reports/report.html
+            --bail
 
       - name: Shutdown Docker
         if: always()
