@@ -1,0 +1,23 @@
+jobs:
+  api-tests:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: 02-api-qa/dockerized-api-qa
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Start API
+        run: docker compose up -d --build
+
+      - name: Install Newman
+        run: npm install -g newman newman-reporter-htmlextra
+
+      - name: Run tests
+        run: |
+          newman run newman/collections/reqres.json \
+            -e newman/environments/reqres.env.json \
+            -r htmlextra \
+            --reporter-htmlextra-export newman/reports/report.html
