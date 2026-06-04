@@ -1,8 +1,10 @@
 # 🚀 QA-Engineering Portfolio
 
-## 📌 Overview
+![API CI Pipeline](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/api-ci.yml/)
 
-This repository documents my 2026 QA Engineering comeback journey through hands-on projects focused on:
+## 📌 Overview
+This project simulates a real QA engineering workflow including manual testing, API automation, UI automation, and CI/CD integration in a structured repository.
+This repository documents my 2026 QA Engineering comeback journey through hands-on projects I focused on:
 
 * 🧪 Manual QA
 * 🔌 API Testing & Automation
@@ -13,6 +15,13 @@ This repository documents my 2026 QA Engineering comeback journey through hands-
 The goal of this portfolio is to demonstrate practical QA engineering skills using real-world tools, structured project organization, and scalable testing approaches.
 
 ---
+
+# 🧱 Architecture Overview
+
+- POM-based UI automation framework
+- Dockerized API test environment
+- CI/CD pipelines via GitHub Actions
+- Modular reusable test utilities
 
 # 🧭 Repository Structure
 
@@ -107,29 +116,20 @@ End-to-end UI automation framework built with Playwright and Page Object Model a
 
 ---
 
-# 🔄 — CI/CD | GitHub Actions Automation
+# 🔄 CI/CD | GitHub Actions
 
-Continuous Integration pipelines are implemented using GitHub Actions to automate QA workflows and improve execution consistency.
+This project includes automated QA pipelines using GitHub Actions.
 
-### Covered Areas
-- Automated API test execution
-- Newman CLI integration
-- HTML report artifact generation
-- Workflow-based validation
-- CI pipeline structure
-- Automation-ready repository organization
+## API Pipeline
+- Runs Newman tests in Dockerized environment
+- Executes on every push to main
+- Generates HTML reports
+- Uploads artifacts
 
-### Current Integrations
-- Dockerized API testing pipeline
-- Newman execution in CI environment
-- Automated report uploads
-- GitHub Actions workflow configuration
-
-### Planned Expansion
-- Playwright UI automation pipeline
-- Multi-stage QA workflows
-- Scheduled test execution
-- Advanced reporting integration
+## UI Pipeline (Planned / In Progress)
+- Playwright execution in CI
+- Cross-browser test runs
+- Report generation and artifacts
 
 ---
 

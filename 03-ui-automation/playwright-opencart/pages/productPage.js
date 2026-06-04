@@ -31,7 +31,7 @@ class ProductPage{
         await this.page.fill('[id="input-model"]', '101');
 
         //  Click SEO Tab
-        await this.page.click('[href="#tab-seo"]');  
+        await this.page.getByRole('tab', { name: 'SEO' }).click();  
 
         //  Generate SEO Keyword    
         const randomSEO = Math.floor(Math.random() * 10000);
@@ -45,7 +45,7 @@ class ProductPage{
         return productName;
     }
 
-    async editProduct() {
+    async editProduct(productName) {
 
         //  Reopen products
         await this.page.click('[id="menu-dashboard"]');
@@ -80,46 +80,9 @@ class ProductPage{
 
     }
 
-    async deleteProduct() {
-
-        //  Open Catalog
-        await this.page.click('[id="menu-catalog"]');
+    async deleteProduct(productName) {
 
         //  Open Products
-        await this.page.click('text=Products');
-    
-        //  Add New Product
-        await this.page.click('[class="btn btn-primary"]');
-
-        //  Generate product name
-        const random = Math.floor(Math.random() * 1000);
-        const productName = `TestProd${random}`;
-
-        //  Product name
-        await this.page.fill('[id="input-name-1"]', productName);
-
-        //  Meta Title     
-        await this.page.fill('[id="input-meta-title-1"]', 'newprdct');
-
-        //  Data Tab
-        await this.page.click('[href="#tab-data"]');
-
-        //  Model    
-        await this.page.fill('[id="input-model"]', '101');
-
-        //  Click SEO Tab
-        await this.page.click('[href="#tab-seo"]');  
-
-        //  Generate SEO Keyword    
-        const randomSEO = Math.floor(Math.random() * 10000);
-        const seoUrl = `seo-url-${randomSEO}`
-
-        await this.page.fill('[name="product_seo_url[0][1]"]', seoUrl);
-
-        // 10. Click Save button
-        await this.page.click('button[type="submit"]');        
-
-        //  Reopen Products
         await this.page.click('#menu-dashboard');
         await this.page.click('#menu-catalog');
         await this.page.click('text=Products');
@@ -128,12 +91,17 @@ class ProductPage{
         await this.page.fill('#input-name', productName);
         await this.page.click('#button-filter');
 
-        const checkbox = this.page.locator('#form-product tbody tr').filter({ hasText: productName }).first().locator('input[type="checkbox"]');
+        const checkbox = this.page
+        .locator('#form-product tbody tr')
+        .filter({ hasText: productName })
+        .first()
+        .locator('input[type="checkbox"]');
+
         await checkbox.click();
 
         await this.page.on('dialog', async dialog => {
             console.log(dialog.message());
-            await this.page.waitForTimeout(2000);
+            await this.page.waitForTimeout(1000);
             await dialog.accept();
         });
 

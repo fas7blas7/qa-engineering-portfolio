@@ -1,6 +1,6 @@
 # API Test Automation Framework
 
-![API CI Pipeline](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/api-ci.yml/badge.svg)
+![API CI Pipeline](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/api-ci.yml/)
 
 ## Overview
 
