@@ -1,5 +1,5 @@
 const { test, expect, } = require('@playwright/test');
-const { LoginPage } = require('/Users/skyli/Desktop/qa-engineering-portfolio/03-ui-automation/playwright-opencart/pages/loginPage.js');
+const { LoginPage } = require('../../pages/loginPage.js');
 
 test.describe("OpenCart Admin Panel", () => {
 

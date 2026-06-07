@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
-const { LoginPage } = require('/Users/skyli/Desktop/qa-engineering-portfolio/03-ui-automation/playwright-opencart/pages/loginPage.js');
-const { ProductPage } = require('/Users/skyli/Desktop/qa-engineering-portfolio/03-ui-automation/playwright-opencart/pages/productPage.js')
+const { LoginPage } = require('../../pages/loginPage.js');
+const { ProductPage } = require('../../pages/productPage.js')
 const { deleteTestProduct } = require('../../utils/testData');
 
 test.describe('Product Management', () => {
