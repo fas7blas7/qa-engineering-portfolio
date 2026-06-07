@@ -9,7 +9,7 @@ jobs:
 ui-tests:
 runs-on: ubuntu-latest
 
-```
+
 defaults:
   run:
     working-directory: 03-ui-automation/playwright-opencart
@@ -36,4 +36,4 @@ steps:
     with:
       name: playwright-report
       path: 03-ui-automation/playwright-opencart/playwright-report
-```
+
