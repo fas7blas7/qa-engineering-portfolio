@@ -1,41 +1,47 @@
-# 🚀 QA-Engineering Portfolio
+# 🚀 QA Engineering Portfolio (2026)
 
-![API CI Pipeline](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/api-ci.yml/)
+[![API CI Pipeline](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/api-ci.yml/badge.svg)](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/api-ci.yml)
+
+---
 
 ## 📌 Overview
-This project simulates a real QA engineering workflow including manual testing, API automation, UI automation, and CI/CD integration in a structured repository.
-This repository documents my 2026 QA Engineering comeback journey through hands-on projects I focused on:
 
-* 🧪 Manual QA
-* 🔌 API Testing & Automation
-* 🤖 UI Automation
-* 🔄 CI/CD Integration
-* 📊 End-to-End Testing Workflows
+This repository simulates a real QA Engineering workflow covering:
 
-The goal of this portfolio is to demonstrate practical QA engineering skills using real-world tools, structured project organization, and scalable testing approaches.
+* Manual Testing
+* API Automation Testing
+* UI Automation Testing
+* CI/CD Integration
+* End-to-End QA workflows
+
+It represents my 2026 QA Engineering learning and implementation journey through structured, real-world projects using modern QA tools and frameworks.
 
 ---
 
 # 🧱 Architecture Overview
 
-- POM-based UI automation framework
-- Dockerized API test environment
-- CI/CD pipelines via GitHub Actions
-- Modular reusable test utilities
+* Page Object Model (POM) UI automation frameworks
+* Dockerized API test environment
+* GitHub Actions CI/CD pipelines
+* Modular and reusable test utilities
+* Scalable multi-project QA structure
+
+---
 
 # 🧭 Repository Structure
 
 ```
 QA-2026-Comeback/
 │
-├── 01-manual-qa/
-│   └── opencart-project/
+├── 01-opencart-manual-qa/
 │
-├── 02-api-qa/
-│   └── dockerized-api-qa/
+├── 02-dummyjson-api-qa/
 │
-├── 03-ui-automation/
-│   └── playwright-opencart/
+├── 03-opencart-playwright-ui-automation/
+│
+├── 04-swaglabs-selenium-pom-framework/
+│
+├── 05-screenshots/
 │
 ├── .github/
 │   └── workflows/
@@ -49,7 +55,7 @@ QA-2026-Comeback/
 
 ## 📦 01 — Manual QA | OpenCart Project
 
-Complete manual QA workflow using the OpenCart e-commerce platform.
+Manual QA workflow simulating real-world e-commerce testing.
 
 ### Covered Areas
 
@@ -58,15 +64,7 @@ Complete manual QA workflow using the OpenCart e-commerce platform.
 * Test case design
 * Exploratory testing
 * Bug reporting
-* Functional validation
-* CRUD workflow testing
-
-### Key Deliverables
-
-* Structured test documentation
-* Real defect reports
-* Test execution evidence
-* QA environment setup
+* Functional testing
 
 ---
 
@@ -83,7 +81,7 @@ API automation framework using Postman, Newman, Docker, and CI execution.
 * HTML reporting
 * GitHub Actions integration
 
-### Technologies
+### Tools
 
 * Postman
 * Newman
@@ -95,73 +93,101 @@ API automation framework using Postman, Newman, Docker, and CI execution.
 
 ## 🤖 03 — UI Automation | Playwright OpenCart
 
-End-to-end UI automation framework built with Playwright and Page Object Model architecture.
+End-to-end UI automation framework built with Playwright and POM architecture.
 
 ### Covered Areas
 
 * Login automation
 * Product CRUD automation
-* Dynamic test data
+* Dynamic test data handling
 * Table filtering validation
-* Alert/dialog handling
+* Alert handling
 * Locator strategy optimization
-* End-to-End UI workflows
+* End-to-end UI workflows
 
 ### Framework Design
 
 * Page Object Model (POM)
 * Reusable test structure
-* Organized domain-based test suites
+* Modular test suites
 * CI-ready architecture
+
+---
+
+## 🧪 04 — UI Automation | SwagLabs Selenium POM Framework (NEW)
+
+Selenium-based UI automation framework built using C#, NUnit, and Page Object Model design.
+
+### Covered Areas
+
+* Login automation
+* Inventory page validation
+* Cart functionality testing
+* Checkout workflow automation
+* UI navigation testing (menu interactions)
+* Page Object Model architecture implementation
+* Reusable base page design (BasePage / BaseTest)
+
+### Framework Design
+
+* Page Object Model (POM)
+* BasePage abstraction for reusable Selenium actions
+* BaseTest setup for test lifecycle management
+* Structured separation of test logic and page logic
+* Maintainable UI automation framework structure
 
 ---
 
 # 🔄 CI/CD | GitHub Actions
 
-This project includes automated QA pipelines using GitHub Actions.
+Automated QA pipelines using GitHub Actions.
 
 ## API Pipeline
-- Runs Newman tests in Dockerized environment
-- Executes on every push to main
-- Generates HTML reports
-- Uploads artifacts
 
-## UI Pipeline (Planned / In Progress)
-- Playwright execution in CI
-- Cross-browser test runs
-- Report generation and artifacts
+* Runs Newman tests in Docker environment
+* Executes on push to main branch
+* Generates HTML reports
+* Uploads artifacts
+
+## UI Pipeline (In Progress)
+
+* Playwright CI execution
+* Cross-browser testing
+* Test report generation
 
 ---
 
 # 🛠 Tools & Technologies
 
-* 🧪 OpenCart
-* ⚙️ Playwright
-* 📬 Postman
-* 🚀 Newman
-* 🐳 Docker
-* 🔄 Git & GitHub
-* 🔧 GitHub Actions
-* 💻 JavaScript
-* 🌐 REST APIs
-* 🧱 JSON Server
+* OpenCart
+* Playwright
+* Selenium WebDriver
+* C#
+* NUnit
+* Postman
+* Newman
+* Docker
+* Git & GitHub
+* GitHub Actions
+* REST APIs
+* JSON Server
 
 ---
 
 # 📊 QA Skills Demonstrated
 
 * Manual Testing
-* Exploratory Testing
 * API Testing
 * UI Automation
+* Test Design
 * CRUD Validation
 * Negative Testing
-* Boundary Testing
+* Exploratory Testing
 * Bug Reporting
 * CI/CD Fundamentals
-* Page Object Model Design
-* Test Framework Organization
-* Docker-Based Test Execution
+* Page Object Model (POM)
+* Framework Design
+* Test Architecture Structuring
 
 ---
 
@@ -169,17 +195,18 @@ This project includes automated QA pipelines using GitHub Actions.
 
 * Expanding Playwright automation coverage
 * Improving CI/CD pipelines
-* Enhancing reusable QA framework architecture
-* Building portfolio-ready QA engineering projects
+* Strengthening Selenium POM framework design
+* Enhancing reusable QA architecture
+* Building production-like QA workflows
 
 ---
 
 # 📌 Portfolio Goal
 
-This repository represents a practical QA engineering portfolio focused on:
+This repository demonstrates practical QA Engineering skills focused on:
 
-* real testing workflows
-* scalable project organization
-* automation fundamentals
+* real-world testing workflows
+* scalable automation frameworks
 * maintainable test architecture
+* CI/CD integration
 * continuous learning and improvement
