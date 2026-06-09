@@ -1,0 +1,25 @@
+name: SwagLabs Selenium CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Restore dependencies
+        run: dotnet restore ./04-swaglabs-selenium-pom-framework/SwagLabs_CleanFinal.sln
+      - name: Build project
+        run: dotnet build ./04-swaglabs-selenium-pom-framework/SwagLabs_CleanFinal.sln --no-restore
+      - name: Run tests
+        run: dotnet test ./04-swaglabs-selenium-pom-framework/SwagLabs_CleanFinal.sln --no-build --verbosity
+          normal

@@ -1,7 +1,7 @@
 # 🚀 QA Engineering Portfolio (2026)
 
 [![API CI Pipeline](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/api-ci.yml/badge.svg)](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/api-ci.yml)
-
+[![SwagLabs Selenium CI](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/swaglabs-ci.yml/badge.svg)](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/swaglabs-ci.yml)
 ---
 
 ## 📌 Overview
@@ -116,7 +116,7 @@ End-to-end UI automation framework built with Playwright and POM architecture.
 
 ## 🧪 04 — UI Automation | SwagLabs Selenium POM Framework (NEW)
 
-Selenium-based UI automation framework built using C#, NUnit, and Page Object Model design.
+Selenium-based UI automation framework built using C#, NUnit, Page Object Model (POM), and GitHub Actions CI.
 
 ### Covered Areas
 
