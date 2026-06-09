@@ -1,36 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-SwagLabs-Automation\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{C4E194BC-FA37-2AAC-C6D1-E35777465BBE}|SwagLabs_CleanFinal.csproj|c:\\users\\skyli\\desktop\\qa-engineering-portfolio\\04-swaglabs-automation\\tests\\inventorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4E194BC-FA37-2AAC-C6D1-E35777465BBE}|SwagLabs_CleanFinal.csproj|solutionrelative:tests\\inventorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4E194BC-FA37-2AAC-C6D1-E35777465BBE}|SwagLabs_CleanFinal.csproj|c:\\users\\skyli\\desktop\\qa-engineering-portfolio\\04-swaglabs-automation\\tests\\checkoutpagetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4E194BC-FA37-2AAC-C6D1-E35777465BBE}|SwagLabs_CleanFinal.csproj|solutionrelative:tests\\checkoutpagetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4E194BC-FA37-2AAC-C6D1-E35777465BBE}|SwagLabs_CleanFinal.csproj|c:\\users\\skyli\\desktop\\qa-engineering-portfolio\\04-swaglabs-automation\\tests\\cartpagetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4E194BC-FA37-2AAC-C6D1-E35777465BBE}|SwagLabs_CleanFinal.csproj|solutionrelative:tests\\cartpagetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4E194BC-FA37-2AAC-C6D1-E35777465BBE}|SwagLabs_CleanFinal.csproj|c:\\users\\skyli\\desktop\\qa-engineering-portfolio\\04-swaglabs-automation\\pages\\cartpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4E194BC-FA37-2AAC-C6D1-E35777465BBE}|SwagLabs_CleanFinal.csproj|solutionrelative:pages\\cartpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4E194BC-FA37-2AAC-C6D1-E35777465BBE}|SwagLabs_CleanFinal.csproj|c:\\users\\skyli\\desktop\\qa-engineering-portfolio\\04-swaglabs-automation\\pages\\basepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4E194BC-FA37-2AAC-C6D1-E35777465BBE}|SwagLabs_CleanFinal.csproj|solutionrelative:pages\\basepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4E194BC-FA37-2AAC-C6D1-E35777465BBE}|SwagLabs_CleanFinal.csproj|c:\\users\\skyli\\desktop\\qa-engineering-portfolio\\04-swaglabs-automation\\pages\\inventorypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4E194BC-FA37-2AAC-C6D1-E35777465BBE}|SwagLabs_CleanFinal.csproj|solutionrelative:pages\\inventorypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4E194BC-FA37-2AAC-C6D1-E35777465BBE}|SwagLabs_CleanFinal.csproj|c:\\users\\skyli\\desktop\\qa-engineering-portfolio\\04-swaglabs-automation\\pages\\checkoutpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4E194BC-FA37-2AAC-C6D1-E35777465BBE}|SwagLabs_CleanFinal.csproj|solutionrelative:pages\\checkoutpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-swaglabs-selenium-pom-framework\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -38,102 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CheckoutPageTests.cs",
-              "DocumentMoniker": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-SwagLabs-Automation\\Tests\\CheckoutPageTests.cs",
-              "RelativeDocumentMoniker": "Tests\\CheckoutPageTests.cs",
-              "ToolTip": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-SwagLabs-Automation\\Tests\\CheckoutPageTests.cs",
-              "RelativeToolTip": "Tests\\CheckoutPageTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T13:01:50.117Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CartPageTests.cs",
-              "DocumentMoniker": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-SwagLabs-Automation\\Tests\\CartPageTests.cs",
-              "RelativeDocumentMoniker": "Tests\\CartPageTests.cs",
-              "ToolTip": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-SwagLabs-Automation\\Tests\\CartPageTests.cs",
-              "RelativeToolTip": "Tests\\CartPageTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T12:59:06.977Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CartPage.cs",
-              "DocumentMoniker": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-SwagLabs-Automation\\Pages\\CartPage.cs",
-              "RelativeDocumentMoniker": "Pages\\CartPage.cs",
-              "ToolTip": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-SwagLabs-Automation\\Pages\\CartPage.cs",
-              "RelativeToolTip": "Pages\\CartPage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T12:57:56.974Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CheckoutPage.cs",
-              "DocumentMoniker": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-SwagLabs-Automation\\Pages\\CheckoutPage.cs",
-              "RelativeDocumentMoniker": "Pages\\CheckoutPage.cs",
-              "ToolTip": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-SwagLabs-Automation\\Pages\\CheckoutPage.cs",
-              "RelativeToolTip": "Pages\\CheckoutPage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T13:02:13.398Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BasePage.cs",
-              "DocumentMoniker": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-SwagLabs-Automation\\Pages\\BasePage.cs",
-              "RelativeDocumentMoniker": "Pages\\BasePage.cs",
-              "ToolTip": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-SwagLabs-Automation\\Pages\\BasePage.cs",
-              "RelativeToolTip": "Pages\\BasePage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T12:28:27.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "InventoryTests.cs",
-              "DocumentMoniker": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-SwagLabs-Automation\\Tests\\InventoryTests.cs",
-              "RelativeDocumentMoniker": "Tests\\InventoryTests.cs",
-              "ToolTip": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-SwagLabs-Automation\\Tests\\InventoryTests.cs",
-              "RelativeToolTip": "Tests\\InventoryTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T12:16:28.344Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "InventoryPage.cs",
-              "DocumentMoniker": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-SwagLabs-Automation\\Pages\\InventoryPage.cs",
-              "RelativeDocumentMoniker": "Pages\\InventoryPage.cs",
-              "ToolTip": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-SwagLabs-Automation\\Pages\\InventoryPage.cs",
-              "RelativeToolTip": "Pages\\InventoryPage.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T12:15:46.887Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",

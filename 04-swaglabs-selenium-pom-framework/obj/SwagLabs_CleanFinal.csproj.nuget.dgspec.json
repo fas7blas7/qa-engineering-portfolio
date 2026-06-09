@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-SwagLabs-Automation\\SwagLabs_CleanFinal.csproj": {}
+    "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-swaglabs-selenium-pom-framework\\SwagLabs_CleanFinal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-SwagLabs-Automation\\SwagLabs_CleanFinal.csproj": {
+    "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-swaglabs-selenium-pom-framework\\SwagLabs_CleanFinal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-SwagLabs-Automation\\SwagLabs_CleanFinal.csproj",
+        "projectUniqueName": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-swaglabs-selenium-pom-framework\\SwagLabs_CleanFinal.csproj",
         "projectName": "SwagLabs_CleanFinal",
-        "projectPath": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-SwagLabs-Automation\\SwagLabs_CleanFinal.csproj",
+        "projectPath": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-swaglabs-selenium-pom-framework\\SwagLabs_CleanFinal.csproj",
         "packagesPath": "C:\\Users\\skyli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-SwagLabs-Automation\\obj\\",
+        "outputPath": "C:\\Users\\skyli\\Desktop\\qa-engineering-portfolio\\04-swaglabs-selenium-pom-framework\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

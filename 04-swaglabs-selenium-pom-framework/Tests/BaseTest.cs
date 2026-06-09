@@ -16,12 +16,14 @@ namespace SwagLabs.Tests
             options.AddArgument("--disable-save-password-bubble");
             options.AddUserProfilePreference("profile.password_manager_enabled", false);
             options.AddUserProfilePreference( "credentials_enable_service", false);
-            
+            options.AddArgument("--headless=new");
+            options.AddArgument("--no-sandbox");
+            options.AddArgument("--disable-dev-shm-usage");
             
 
             driver = new ChromeDriver(options);
 
-            driver.Manage().Window.Maximize();
+            driver.Manage().Window.Size = new System.Drawing.Size(1920, 1080);
         }
 
         [TearDown]
