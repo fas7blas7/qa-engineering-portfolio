@@ -1,5 +1,7 @@
 # 🧪 SwagLabs Selenium UI Automation Framework
 
+[![API CI Pipeline](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/api-ci.yml/badge.svg)](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/api-ci.yml)
+
 ## 📌 Overview
 
 This project is a UI automation test framework built for the SwagLabs demo application using Selenium WebDriver, C#, NUnit, and the Page Object Model (POM) design pattern.
@@ -127,6 +129,16 @@ dotnet test --filter "FullyQualifiedName~LoginTests"
 
 ---
 
+## 🔄 CI/CD
+
+This project uses GitHub Actions to:
+
+- Restore dependencies
+- Build the solution
+- Execute NUnit tests automatically
+
+---
+
 ## 🔄 Recent Updates (June 2026)
 
 * Completed full Page Object Model (POM) framework implementation
@@ -135,7 +147,7 @@ dotnet test --filter "FullyQualifiedName~LoginTests"
 * Improved framework structure and maintainability
 * Stabilized end-to-end UI test flows across multiple pages
 * Enhanced BasePage reusable method set for Selenium actions
-
+* Added GitHub Actions CI integration
 ---
 
 ## 🎯 Key Learning Outcomes
