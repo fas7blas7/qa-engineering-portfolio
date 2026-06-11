@@ -1,35 +1,32 @@
-﻿using NUnit.Framework;
-using SwagLabs.Pages;
+﻿using TestProject.Flows;
+using TestProject.Core;
+using TestProject.Pages;
 
-namespace SwagLabs.Tests
+namespace TestProject.Tests
 {
     public class LoginTests : BaseTest
-    {
+    {        
+
         [Test]
-        public void ValidUserCanLogin()
+        public void ValidUserLogin()
         {
-            driver.Navigate().GoToUrl("https://www.saucedemo.com/");
-
-            var loginPage = new LoginPage(driver);
-
-            loginPage.Login("standard_user", "secret_sauce");
+            driver.Navigate().GoToUrl(BaseUrl);
+            var loginFlow = new LoginFlow(driver);
+            loginFlow.LoginAsStandardUser();
 
             Assert.That(driver.Url, Is.EqualTo("https://www.saucedemo.com/inventory.html"));
-            Console.WriteLine($"Current URL after login: {driver.Url}");
         }
 
         [Test]
-        public void invalidUserCanNotLogin()
+        public void InvalidLogin()
         {
-            driver.Navigate().GoToUrl("https://www.saucedemo.com/");
-
+            driver.Navigate().GoToUrl(BaseUrl);
             var loginPage = new LoginPage(driver);
 
-            loginPage.Login("wrongname", "wrongpass");
+            loginPage.Login("wrong_username", "wrong_pass");
 
             Assert.That(loginPage.GetErrorMessage(),
                 Is.EqualTo("Epic sadface: Username and password do not match any user in this service"));
-
         }
     }
 }

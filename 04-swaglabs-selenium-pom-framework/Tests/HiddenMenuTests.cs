@@ -1,31 +1,56 @@
-﻿using SwagLabs.Pages;
+﻿using OpenQA.Selenium;
+using TestProject.Core;
+using TestProject.Flows;
+using TestProject.Pages;
 
-namespace SwagLabs.Tests
+namespace TestProject.Tests
 {
-   [TestFixture]
-        public class HiddenMenuTests : BaseTest
+    internal class HiddenMenuTests : BaseTest
+    {
+
+        [Test]
+        public void NavigateToInventory()
         {
-        [SetUp]
-        public void Login()
-        {
-            driver.Navigate().GoToUrl("https://www.saucedemo.com/");
-            var loginPage = new LoginPage(driver);
-            loginPage.Login("standard_user", "secret_sauce");
+            driver.Navigate().GoToUrl(BaseUrl);
+            var loginFlow = new LoginFlow(driver);
+            loginFlow.LoginAsStandardUser();
+
+            var cartPage = new CartPage(driver);
+            cartPage.GoToCart();
+
+            var hiddenMenuPage = new HiddenMenuPage(driver);
+            hiddenMenuPage.ClickBurgerButton();
+            hiddenMenuPage.ClickInventoryButton();
+
+            Assert.That(driver.Url, Is.EqualTo(BaseUrl + "inventory.html"));
         }
 
         [Test]
-        public void UserCanLogout()
+        public void NavigateToAbout()
         {
+            driver.Navigate().GoToUrl(BaseUrl);
+            var loginFlow = new LoginFlow(driver);
+            loginFlow.LoginAsStandardUser();
+
             var hiddenMenuPage = new HiddenMenuPage(driver);
-            hiddenMenuPage.OpenMenu();
+            hiddenMenuPage.ClickBurgerButton();
+            hiddenMenuPage.ClickAboutButton();
 
-            // Verify that the logout button is displayed when the menu is opened
-            Assert.That(hiddenMenuPage.IsMenuOpen(), Is.True, "The menu did not open correctly.");
-        
+            Assert.That(driver.Url, Is.EqualTo("https://saucelabs.com/"));
+        }
 
-            hiddenMenuPage.Logout();
+        [Test]
+        public void Logout()
+        {
+            driver.Navigate().GoToUrl(BaseUrl);
+            var loginFlow = new LoginFlow(driver);
+            loginFlow.LoginAsStandardUser();
 
-            Assert.That(driver.Url, Is.EqualTo("https://www.saucedemo.com/"));
+            var hiddenMenuPage = new HiddenMenuPage(driver);
+            hiddenMenuPage.ClickBurgerButton();
+            hiddenMenuPage.ClikLogoutButton();
+
+            Assert.That(driver.Url, Is.EqualTo(BaseUrl));
         }
     }
 }

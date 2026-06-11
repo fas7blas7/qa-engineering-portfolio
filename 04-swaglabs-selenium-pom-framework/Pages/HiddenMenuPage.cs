@@ -1,40 +1,43 @@
 ﻿using OpenQA.Selenium;
+using TestProject.Core;
 
-namespace SwagLabs.Pages
-{
+namespace TestProject.Pages 
+{ 
     public class HiddenMenuPage : BasePage
     {
-        private readonly By menuButton = By.Id("react-burger-menu-btn");
+        private readonly By burgerButton = By.Id("react-burger-menu-btn");
+        private readonly By closeBurgerMenuButton = By.Id("react-burger-cross-btn");
+        private readonly By inventoryButton = By.Id("inventory_sidebar_link");
+        private readonly By aboutButton = By.Id("about_sidebar_link");
         private readonly By logoutButton = By.Id("logout_sidebar_link");
 
         public HiddenMenuPage(IWebDriver driver) : base(driver)
         {
         }
 
-        public void OpenMenu()
+        public void ClickBurgerButton()
         {
-            Click(menuButton);            
+            Click(burgerButton);
         }
 
-
-        public void Logout()
-        {            
-            Click(logoutButton);
+        public void CloseBurgerMenu()
+        {
+            WaitForClickable(closeBurgerMenuButton).Click();            
         }
 
-        public bool IsMenuOpen()
+        public void ClickInventoryButton()
         {
-            try
-            {
-                wait.Until(d =>
-                    d.FindElement(logoutButton).Displayed);
+            WaitForClickable(inventoryButton).Click();
+        }
 
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
+        public void ClickAboutButton()
+        {
+            WaitForClickable(aboutButton).Click();
+        }
+
+        public void ClikLogoutButton()
+        {
+            WaitForClickable(logoutButton).Click();
         }
     }
 }

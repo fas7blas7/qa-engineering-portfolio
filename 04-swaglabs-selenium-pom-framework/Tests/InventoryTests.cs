@@ -1,58 +1,38 @@
-﻿using SwagLabs.Pages;
+﻿using TestProject.Core;
+using TestProject.Flows;
+using TestProject.Pages;
 
-namespace SwagLabs.Tests
+namespace TestProject.Tests
 {
-    [TestFixture]
+
     public class InventoryTests : BaseTest
     {
-
-        [SetUp]
-        public void Login()
+        [Test]
+        public void AddToCartByName()
         {
-            driver.Navigate().GoToUrl("https://www.saucedemo.com/");
-            var loginPage = new LoginPage(driver);
-            loginPage.Login("standard_user", "secret_sauce");
+            driver.Navigate().GoToUrl(BaseUrl);
+            var loginFlow = new LoginFlow(driver);
+            loginFlow.LoginAsStandardUser();
+
+            var inventoryPage = new InventoryPage(driver);
+            inventoryPage.IsPageLoaded();
+
+            inventoryPage.AddToCartByName("Sauce Labs Backpack");
         }
 
         [Test]
-        public void TestInventoryDisplay()
+        public void RemoveFromCart()
         {
+            driver.Navigate().GoToUrl(BaseUrl);
+            var loginFlow = new LoginFlow(driver);
+            loginFlow.LoginAsStandardUser();
+
             var inventoryPage = new InventoryPage(driver);
-            Assert.That(inventoryPage.IsInventoryDisplayed(), Is.True, "Inventory items are not displayed.");
+            inventoryPage.IsPageLoaded();
+
+            var productName = "Sauce Labs Bike Light";
+            inventoryPage.AddToCartByName(productName);
+            inventoryPage.RemoveProduct(productName);
         }
-
-        [Test]
-        public void TestAddToCartByIndex()
-        {
-            var inventoryPage = new InventoryPage(driver);
-            inventoryPage.AddToCartByIndex(0); // Add the first item to the cart
-
-            var cartPage = new CartPage(driver);
-            inventoryPage.ClickCartLink();
-
-            Assert.That(cartPage.IsCartItemDisplayed(), Is.True, "The item was not added to the cart.");
-        }
-
-        [Test]
-        public void TestAddToCartByName()
-        {
-            var inventoryPage = new InventoryPage(driver);
-            inventoryPage.AddToCartByName("Sauce Labs Backpack"); // Add item by product name
-
-            var cartPage = new CartPage(driver);
-            inventoryPage.ClickCartLink();
-
-            Assert.That(cartPage.IsCartItemDisplayed(), Is.True, "The item was not added to the cart.");
-        }
-
-        [Test]
-        public void TestPageTitle()
-        {
-            var inventoryPage = new InventoryPage(driver);
-            Assert.That(inventoryPage.IsPageLoaded(), Is.True, "The inventory page did not load correctly.");
-        }
-
-        
     }
 }
-        

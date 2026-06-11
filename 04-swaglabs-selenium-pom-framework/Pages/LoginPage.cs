@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
+using TestProject.Core;
 
-namespace SwagLabs.Pages
+namespace TestProject.Pages
 {
     public class LoginPage : BasePage
     {

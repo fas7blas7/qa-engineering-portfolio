@@ -1,166 +1,145 @@
-# 🧪 SwagLabs Selenium UI Automation Framework
+🧪 SwagLabs Selenium POM Automation Framework
 
-[![API CI Pipeline](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/api-ci.yml/badge.svg)](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/api-ci.yml)
+📌 Overview
 
-## 📌 Overview
+This project is a QA Automation Framework built using Selenium WebDriver, C#, NUnit, and the Page Object Model (POM) design pattern.
 
-This project is a UI automation test framework built for the SwagLabs demo application using Selenium WebDriver, C#, NUnit, and the Page Object Model (POM) design pattern.
+It simulates real-world end-to-end user flows on the SwagLabs demo application and demonstrates scalable UI automation architecture.
 
-The framework automates core user workflows such as authentication, product interaction, cart management, and checkout processes.
+The framework covers:
 
----
+UI automation testing
+Page Object Model design
+Reusable test flows
+End-to-end checkout process
+Cart and inventory validation
+Menu navigation and logout functionality
 
-## 🛠️ Tech Stack
-
-* C#
-* .NET 8
-* Selenium WebDriver
-* NUnit
-* Page Object Model (POM)
-
----
-
-## 🧱 Framework Architecture
-
-The project is built using the Page Object Model (POM) design pattern to ensure:
-
-* Separation of test logic and page logic
-* Reusable UI components
-* Maintainable and scalable automation structure
-* Clear abstraction between pages and tests
-
-### Core Layers
-
-* **BasePage** → Shared Selenium actions (Click, Type, GetText, Find, FindElements)
-* **BaseTest** → Test setup and teardown logic
-* **Page Objects** → Encapsulation of UI behavior per page
-* **Test Classes** → Test scenarios grouped by feature
-
----
-
-## 📂 Project Structure
-
-### 📄 Pages
-
+🏗️ Project Structure
 ```
+Core/
+    BasePage.cs
+    BaseTest.cs
+
+Flows/
+    LoginFlow.cs
+
 Pages/
-├── BasePage.cs
-├── LoginPage.cs
-├── InventoryPage.cs
-├── CartPage.cs
-├── CheckoutPage.cs
-├── HiddenMenuPage.cs
-```
+    LoginPage.cs
+    InventoryPage.cs
+    HiddenMenuPage.cs
+    CartPage.cs
+    CheckoutInfoPage.cs
+    CheckoutOverviewPage.cs
 
-### 🧪 Tests
-
-```
 Tests/
-├── BaseTest.cs
-├── LoginTests.cs
-├── InventoryTests.cs
-├── CartPageTests.cs
-├── CheckoutPageTests.cs
-├── HiddenMenuTests.cs
+    LoginTests.cs
+    InventoryTests.cs
+    HiddenMenuTests.cs
+    CartTests.cs
+    CheckoutTests.cs
+
+swag-labs.csproj
+swag-labs-pom.slnx
 ```
 
----
+🧱 Core Layer
 
-## ▶️ How to Run Tests
+BaseTest
 
-* Prerequisites
+Responsible for:
 
-- .NET 8 SDK installed
-- Google Chrome installed
-- Visual Studio / Rider (recommended)
+WebDriver initialization
+Browser configuration
+Test setup and teardown
+BasePage
 
-* Run from Visual Studio
+Provides reusable Selenium wrapper methods used across all page objects.
 
-1. Open SwagLabs.sln
-2. Build the solution
-3. Open Test Explorer
-4. Click Run All Tests
+🔄 Flows Layer
 
-* Run from Terminal
+LoginFlow
 
-1. Navigate to the project root:
-cd 04-swaglabs-selenium-pom-framework
+Encapsulates reusable login behavior such as:
 
-2. Restore dependencies:
-dotnet restore
+Standard user login
 
-3. Build the project:
-dotnet build
+Used to reduce duplication across test classes and improve readability.
 
-4. Run tests:
-dotnet test
+📄 Pages Layer
 
-* Run specific test class *
-dotnet test --filter "FullyQualifiedName~LoginTests"
+Each page represents a UI component of the application:
 
----
+LoginPage → login functionality and error handling
+InventoryPage → product listing and add/remove cart actions
+HiddenMenuPage → navigation, logout, and external links
+CartPage → cart validation and checkout navigation
+CheckoutInfoPage → user information input
+CheckoutOverviewPage → order summary and finalization
 
-## ✅ Automated Test Coverage
+🧪 Test Coverage
 
-### 🔐 Authentication
+LoginTests
+ValidUserLogin
+InvalidLogin
+InventoryTests
+AddToCartByName
+RemoveFromCart
+HiddenMenuTests
+NavigateToInventory
+NavigateToAbout
+Logout
+CartTests
+GoToCart
+GetCartItemCount
+ProductExistsInCart
+SpecificProductRemains
+ContinueShopping
+IsCartEmpty
+RemoveProductByName
+Checkout
+CheckoutTests
+TestCheckoutPageLoaded
+TestContinueToNextStep
+TestCompleteOrder
 
-* Valid login with `standard_user`
-* Invalid login with incorrect credentials
+🛠️ Tools & Technologies
+C#
+.NET
+Selenium WebDriver
+NUnit
+Page Object Model (POM)
+ChromeDriver
 
-### 📦 Inventory
+🔁 End-to-End Flow
 
-* Product display validation
-* Add-to-cart functionality
+The main automated user journey:
 
-### 🛒 Cart
+Login → Add Product → Cart → Checkout → Order Completion
 
-* Cart item validation
-* Checkout navigation
+🎯 Key Features
+Page Object Model architecture
+Clean separation of concerns
+Reusable base classes
+Modular test design
+End-to-end UI automation coverage
+Cart and product validation logic
+Multi-step checkout automation
 
-### 💳 Checkout
+📌 Future Improvements
+Add explicit wait wrapper (WebDriverWait utility)
+Improve locator strategy consistency
+Add test reporting (Allure / ExtentReports)
+Add CI/CD pipeline (GitHub Actions)
+Add parallel test execution
 
-* Checkout flow execution
-* Order process validation
+🧠 Learning Outcome
 
-### 🧭 Navigation / Session
+This project demonstrates practical QA automation skills including:
 
-* Hidden menu interactions
-* Logout flow handling
-
----
-
-## 🔄 CI/CD
-
-This project uses GitHub Actions to:
-
-- Restore dependencies
-- Build the solution
-- Execute NUnit tests automatically
-
----
-
-## 🔄 Recent Updates (June 2026)
-
-* Completed full Page Object Model (POM) framework implementation
-* Expanded page coverage to include Cart and Checkout pages
-* Added full test suite separation per feature area
-* Improved framework structure and maintainability
-* Stabilized end-to-end UI test flows across multiple pages
-* Enhanced BasePage reusable method set for Selenium actions
-* Added GitHub Actions CI integration
----
-
-## 🎯 Key Learning Outcomes
-
-* Selenium WebDriver automation in C#
-* Page Object Model (POM) architecture design
-* NUnit test framework structure
-* UI test framework development
-* Multi-page workflow automation
-* Maintainable test design principles
-
----
-
-## 📌 Project Goal
-
-This project demonstrates practical QA automation engineering skills by implementing a scalable UI automation framework based on real-world testing practices, including structured page modeling, reusable components, and modular test design.
+Selenium UI automation
+Framework design principles
+POM architecture
+Debugging UI automation issues
+Structuring scalable test suites
+End-to-end test workflow design
