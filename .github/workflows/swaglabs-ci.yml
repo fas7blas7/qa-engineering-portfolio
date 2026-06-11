@@ -17,7 +17,7 @@ jobs:
         with:
           dotnet-version: 8.0.x
       - name: Restore dependencies
-        run: dotnet restore ./04-swaglabs-selenium-pom-framework/swag-labs.csproj.sln
+        run: dotnet restore ./04-swaglabs-selenium-pom-framework/swag-labs.csproj
       - name: Build project
         run: dotnet build ./04-swaglabs-selenium-pom-framework/swag-labs.csproj --no-restore
       - name: Run tests
