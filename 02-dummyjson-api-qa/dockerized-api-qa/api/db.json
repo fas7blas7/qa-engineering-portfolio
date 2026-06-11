@@ -1,0 +1,13 @@
+{
+  "users": [
+    { "id": 1, "name": "Martin" },
+    { "id": 2, "name": "John" }
+  ],
+  "products": [
+    { "id": 1, "name": "Laptop" },
+    { "id": 2, "name": "Mouse" }
+  ],
+  "posts": [
+    { "id": 1, "title": "Hello API" }
+  ]
+}

@@ -2,9 +2,12 @@
 
 [![API CI Pipeline](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/api-ci.yml/badge.svg)](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/api-ci.yml)
 [![SwagLabs Selenium CI](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/swaglabs-ci.yml/badge.svg)](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/swaglabs-ci.yml)
+
+> CI pipelines automatically run API and UI automation tests on every push to `main`.
+
 ---
 
-## 📌 Overview
+# 📌 Overview
 
 This repository simulates a real QA Engineering workflow covering:
 
@@ -185,6 +188,7 @@ Automated QA pipelines using GitHub Actions.
 * Exploratory Testing
 * Bug Reporting
 * CI/CD Fundamentals
+* CI/CD Pipeline Integration (GitHub Actions)
 * Page Object Model (POM)
 * Framework Design
 * Test Architecture Structuring
@@ -198,6 +202,28 @@ Automated QA pipelines using GitHub Actions.
 * Strengthening Selenium POM framework design
 * Enhancing reusable QA architecture
 * Building production-like QA workflows
+
+---
+
+# ⭐ Key Highlights
+
+- Built multi-project QA automation portfolio
+- Implemented Page Object Model (POM) architecture
+- Designed reusable test flows for UI automation
+- Integrated CI/CD pipelines using GitHub Actions
+- Built API testing framework with Docker + Newman
+- Developed scalable test structure across multiple technologies
+
+---
+
+# 💡 What Makes This Project Stand Out
+
+Unlike basic automation demos, this project simulates a real QA engineering environment with:
+
+- Multiple independent QA projects in one repository
+- Separation of manual, API, and UI automation layers
+- CI/CD integration for automated validation
+- Real-world scalable framework design patterns
 
 ---
 
