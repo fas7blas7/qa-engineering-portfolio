@@ -17,9 +17,8 @@ jobs:
         with:
           dotnet-version: 8.0.x
       - name: Restore dependencies
-        run: dotnet restore ./04-swaglabs-selenium-pom-framework/SwagLabs_CleanFinal.sln
+        run: dotnet restore ./04-swaglabs-selenium-pom-framework/swag-labs.csproj.sln
       - name: Build project
-        run: dotnet build ./04-swaglabs-selenium-pom-framework/SwagLabs_CleanFinal.sln --no-restore
+        run: dotnet build ./04-swaglabs-selenium-pom-framework/swag-labs.csproj --no-restore
       - name: Run tests
-        run: dotnet test ./04-swaglabs-selenium-pom-framework/SwagLabs_CleanFinal.sln --no-build --verbosity
-          normal
+        run: dotnet test ./04-swaglabs-selenium-pom-framework/swag-labs.csproj --no-build --verbosity normal
