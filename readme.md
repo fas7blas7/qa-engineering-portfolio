@@ -44,12 +44,14 @@ QA-2026-Comeback/
 │
 ├── 04-swaglabs-selenium-pom-framework/
 │
-├── 05-screenshots/
+├── 05-javascript-unit-testing/
+│
+├── 06-screenshots/
 │
 ├── .github/
 │   └── workflows/
 │
-└── README.md
+└── readme.md
 ```
 
 ---
@@ -205,6 +207,27 @@ Automated QA pipelines using GitHub Actions.
 
 ---
 
+## 🧩 JavaScript Unit Testing
+
+JavaScript fundamentals and unit testing practice project built with Mocha and Chai.
+
+**Covered topics:**
+
+* Functions and modules
+* String manipulation
+* Array manipulation
+* Error handling
+* Positive and negative test scenarios
+* Edge case validation
+
+**Implemented exercises:**
+
+* Calculator operations (add, subtract, multiply, divide)
+* Reverse string
+* Palindrome checker
+* Word counting
+
+
 # ⭐ Key Highlights
 
 - Built multi-project QA automation portfolio
@@ -218,7 +241,7 @@ Automated QA pipelines using GitHub Actions.
 
 # 💡 What Makes This Project Stand Out
 
-Unlike basic automation demos, this project simulates a real QA engineering environment with:
+**Unlike basic automation demos, this project simulates a real QA engineering environment with:**
 
 - Multiple independent QA projects in one repository
 - Separation of manual, API, and UI automation layers
