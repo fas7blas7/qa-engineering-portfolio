@@ -1,0 +1,20 @@
+{
+  "name": "05-javascript-unit-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "chai": "^6.2.2",
+    "mocha": "^8.1.3"
+  }
+}
