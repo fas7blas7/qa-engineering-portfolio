@@ -30,8 +30,8 @@ module.exports = { reverseString, isPalindrome, countWords }
 
 
 
-const result = countWords("I   ate   your   breakfast.");
-console.log(result)
+//const result = countWords("I   ate   your   breakfast.");
+//console.log(result)
 //const result = reverseString("Martin");
 //console.log(result);
 //const palindrome = isPalindrome("level");

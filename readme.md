@@ -143,6 +143,44 @@ Selenium-based UI automation framework built using C#, NUnit, Page Object Model 
 
 ---
 
+## 🧩 05 - JavaScript Unit Testing
+
+JavaScript fundamentals and unit testing practice project built with Mocha and Chai.
+
+**Covered topics:**
+
+* Functions and modules
+* String manipulation
+* Array manipulation
+* Loops and conditional logic
+* Data validation
+* Error handling
+* Positive and negative test scenarios
+* Edge case validation
+
+**Implemented exercises:**
+
+* Calculator operations (add, subtract, multiply, divide)
+* Reverse string
+* Palindrome checker
+* Word counting
+* Find maximum value in an array (`getMax`)
+* Find minimum value in an array (`getMin`)
+
+**Test coverage includes:**
+
+* Empty arrays
+* Single-element arrays
+* Duplicate values
+* Negative numbers
+* Zero values
+* String-to-number conversion
+* NaN handling
+* Mixed valid and invalid input
+
+---
+
+
 # 🔄 CI/CD | GitHub Actions
 
 Automated QA pipelines using GitHub Actions.
@@ -206,27 +244,6 @@ Automated QA pipelines using GitHub Actions.
 * Building production-like QA workflows
 
 ---
-
-## 🧩 JavaScript Unit Testing
-
-JavaScript fundamentals and unit testing practice project built with Mocha and Chai.
-
-**Covered topics:**
-
-* Functions and modules
-* String manipulation
-* Array manipulation
-* Error handling
-* Positive and negative test scenarios
-* Edge case validation
-
-**Implemented exercises:**
-
-* Calculator operations (add, subtract, multiply, divide)
-* Reverse string
-* Palindrome checker
-* Word counting
-
 
 # ⭐ Key Highlights
 

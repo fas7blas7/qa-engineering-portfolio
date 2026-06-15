@@ -1,5 +1,5 @@
 const { expect } = require ('chai');
-const { reverseString, isPalindrome, countWords } = require ('/Users/skyli/Desktop/qa-engineering-portfolio/05-javascript-unit-testing/src/stringUtils.js')
+const { reverseString, isPalindrome, countWords } = require ('../src/stringUtils')
 
 describe('Reverse String Operations', () => {
 

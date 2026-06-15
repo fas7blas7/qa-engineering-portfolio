@@ -1,8 +1,5 @@
 const { expect } = require('chai');
-const { add } = require('/Users/skyli/Desktop/qa-engineering-portfolio/05-javascript-unit-testing/src/calculator.js');
-const { subtract } = require('/Users/skyli/Desktop/qa-engineering-portfolio/05-javascript-unit-testing/src/calculator.js');
-const { multiply } = require('/Users/skyli/Desktop/qa-engineering-portfolio/05-javascript-unit-testing/src/calculator.js');
-const { divide } = require('/Users/skyli/Desktop/qa-engineering-portfolio/05-javascript-unit-testing/src/calculator.js');
+const { add, subtract, multiply, divide } = require('../src/calculator');
 
 describe ('Calculator Operations - add, subtract, multiply, divide', () => {
 
