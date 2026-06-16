@@ -1,7 +1,7 @@
 const { expect } = require ('chai');
-const { getMax, getMin } = require ('../src/arrayUtils');
+const { getMax, getMin, sumArray } = require ('../src/arrayUtils');
 
-describe('getMax', () => {
+describe('getMax Tests', () => {
 
     it('Should return the highest number from given array', () => {
         const numbers = [1, 2, 5, 9, 15, 25, 352, 178];
@@ -60,24 +60,29 @@ describe('getMax', () => {
     });
 
     it('Should ignore null and undefined values', () => {
-    const numbers = [5, null, undefined, 15];
+        const numbers = [5, null, undefined, 15];
+        let result = getMax(numbers);
 
-    let result = getMax(numbers);
-
-    expect(result).to.equal(15);
+        expect(result).to.equal(15);
     });
 
     it('Should return undefined when all values are invalid', () => {
-    const numbers = [null, undefined, NaN, "abc"];
+        const numbers = [null, undefined, NaN, "abc"];
+        let result = getMax(numbers);
 
-    let result = getMax(numbers);
+        expect(result).to.be.undefined;
+    });
 
-    expect(result).to.be.undefined;
+    it('Should return 1 when true, false and 1 values are given', () => {
+        const numbers = [true, false, 1];
+        let result = getMax(numbers);
+
+        expect(result).to.equal(1);
     });
 
 });
 
-describe('getMin', () => {
+describe('getMin Tests', () => {
 
     it('Should return lowest number from given array', () => {
 
@@ -133,7 +138,7 @@ describe('getMin', () => {
         expect(result).to.equal(3);
     });
 
-    it('Should return min value 0 when given empty string and negative numbers', () => {
+    it('Should return min value 0 when given empty string', () => {
         const numbers = [3, 18, "", 55];
         let result = getMin(numbers);
         
@@ -142,7 +147,6 @@ describe('getMin', () => {
 
     it('Should ignore null and undefined values', () => {
     const numbers = [5, null, undefined, 15];
-
     let result = getMin(numbers);
 
     expect(result).to.equal(5);
@@ -150,10 +154,97 @@ describe('getMin', () => {
 
     it('Should return undefined when all values are invalid', () => {
     const numbers = [null, undefined, NaN, "abc"];
-
     let result = getMax(numbers);
 
     expect(result).to.be.undefined;
     });
 
+    it('Should return 1 when true, false and 1 values are given', () => {
+        const numbers = [true, false, 1];
+        let result = getMax(numbers);
+
+        expect(result).to.equal(1);
+    });
+
+});
+
+describe('sumArray Tests', () => {
+
+    it('Should return correct sum of array', () => {
+
+        const numbers = [1, 9, 20, 70];
+        let result = sumArray([1, 9, 20, 70]);
+        expect(result).to.equal(100);
+    });
+
+    it('Should return correct sum of array', () => {
+
+        const numbers = [1, 9, -20, 70, 0];
+        let result = sumArray(numbers);
+        expect(result).to.equal(60);
+    });
+
+    it('Should return correct sum of array ', () => {
+
+        const numbers = [-1, -9, -20, -70];
+        let result = sumArray(numbers);
+        expect(result).to.equal(-100);
+    });
+
+    it('Should return correct sum of array ', () => {
+
+        const numbers = [64, 64];
+        let result = sumArray(numbers);
+        expect(result).to.equal(128);
+    });
+
+    it('Should return correct sum of array with negative numbers', () => {
+
+        const numbers = [-1, -9, -20, -70];
+        let result = sumArray(numbers);
+        expect(result).to.equal(-100);
+    });
+
+    it('Should return correct sum of array with string, NaN and undefined', () => {
+
+        const numbers = [-1, "abc", NaN, undefined, 30, 0];
+        let result = sumArray(numbers);
+        expect(result).to.equal(29);
+    });
+
+    it('Should return 0 with empty array', () => {
+
+        const numbers = [];
+        let result = sumArray(numbers);
+        expect(result).to.equal(0);
+    });
+
+    it('Should return 0 with empty string', () => {
+
+        const numbers = [""];
+        let result = sumArray(numbers);
+        expect(result).to.equal(0);
+    });
+
+    it('Should return 0 with several whitespaces string', () => {
+
+        const numbers = ["    "];
+        let result = sumArray(numbers);
+        expect(result).to.equal(0);
+    });
+
+    it('Should return 0 when all values are wrong in the array', () => {
+
+        const numbers = [undefined, NaN, null, "abc"];
+        let result = sumArray(numbers);
+        expect(result).to.equal(0);
+    });
+
+    it('Should return 1 when true, false and 1 values are given', () => {
+    const numbers = [true, false, 1];
+
+    let result = sumArray(numbers);
+
+    expect(result).to.equal(1);
+    });
 });

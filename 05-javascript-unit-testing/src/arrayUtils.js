@@ -12,6 +12,10 @@ function getMax(numbers){
         
         if (value == null) continue;
 
+        if (typeof value === "boolean") {
+            continue;
+        }
+
         if(typeof value === "string"){
             value = Number(value)
         }
@@ -30,6 +34,10 @@ function getMax(numbers){
 
 function getMin(numbers){
 
+    if(!Array.isArray(numbers) || numbers.length === 0){
+        return undefined;
+    }
+
     let min = undefined;
 
     for(let i = 0; i < numbers.length; i++){
@@ -37,8 +45,12 @@ function getMin(numbers){
         let value = numbers[i];
         
         if (value == null) continue;
+
+        if (typeof value === "boolean") {
+            continue;
+        }
         
-        if(typeof value == "string"){
+        if(typeof value === "string"){
             value = Number(value)
         }
 
@@ -53,7 +65,40 @@ function getMin(numbers){
     return min;
 };
 
-module.exports = { getMax, getMin }
+function sumArray(numbers){
 
+    if (!Array.isArray(numbers)) {
+        return undefined;
+    }
+
+    let sum = 0;
+
+    for(let i = 0; i < numbers.length; i++){
+
+        let value = numbers[i];
+
+        if(value == null) continue;
+
+        if (typeof value === "boolean") {
+             continue;
+        }
+
+        if(typeof value === "string"){
+            value = Number(value);
+        }
+
+        if(Number.isNaN(value)){
+            continue;
+        }
+        
+        sum += value;
+    }
+
+    return sum;
+};
+
+module.exports = { getMax, getMin, sumArray }
+
+console.log(sumArray([true, false, 1]));
 //console.log(getMax([11, "11111", "asd", "", 356, 0, -1, NaN,]));
-//console.log(getMin([5, 6, "7", 9, "", "asd", NaN, undefined]));
+//console.log(getMin(["asd", NaN, undefined, null]));
