@@ -42,12 +42,16 @@ test/
 * isPalindrome()
 * countWords()
 
-### Array Utilities
+## Array Utilities
 
 * getMax()
 * getMin()
+* sumArray()
+* average()
 
 ## 🧪 Test Coverage
+
+The project includes:
 
 The project includes:
 
@@ -55,11 +59,13 @@ The project includes:
 * Negative test cases
 * Edge case validation
 * Empty array handling
-* Single-element arrays
-* Duplicate values
-* String-to-number conversion
+* Empty string handling
+* Non-array input validation
+* Numeric string conversion
 * NaN handling
+* Boolean value handling
 * Mixed valid and invalid input values
+* Decimal number validation
 
 ## ▶️ Run Tests
 
@@ -82,11 +88,9 @@ npm test
 
 * Array traversal
 * Maximum and minimum value algorithms
+* Sum and average calculations
 * Type checking
 * Number conversion
 * NaN handling
 * Defensive programming
 * Writing maintainable unit tests
-
-```
-```

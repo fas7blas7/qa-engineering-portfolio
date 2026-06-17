@@ -160,12 +160,14 @@ JavaScript fundamentals and unit testing practice project built with Mocha and C
 
 **Implemented exercises:**
 
-* Calculator operations (add, subtract, multiply, divide)
-* Reverse string
-* Palindrome checker
-* Word counting
+* Calculator operations (`add, subtract, multiply, divide`)
+* Reverse string (`reverseString`)
+* Palindrome checker (`isPalindrome`)
+* Word counting (`countWords`)
 * Find maximum value in an array (`getMax`)
 * Find minimum value in an array (`getMin`)
+* Sum array values (`sumArray`)
+* Calculate average value (`average`)
 
 **Test coverage includes:**
 

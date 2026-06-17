@@ -1,5 +1,5 @@
 const { expect } = require ('chai');
-const { getMax, getMin, sumArray } = require ('../src/arrayUtils');
+const { getMax, getMin, sumArray, average } = require ('../src/arrayUtils');
 
 describe('getMax Tests', () => {
 
@@ -246,5 +246,62 @@ describe('sumArray Tests', () => {
     let result = sumArray(numbers);
 
     expect(result).to.equal(1);
+    });
+});
+
+describe('Average operation Tests', () => {
+
+    it('Should return correct average', () => {
+
+        const numbers = [1, 2, 3, 4, 5, 6];
+        let result = average(numbers);
+
+        expect(result).to.equal(3.5);
+    });
+
+    it('Should return correct average when a negative number is passed', () => {
+
+        const numbers = [1, 2, 3, 4, 5, 6, -10];
+        let result = average(numbers);
+
+        expect(result).to.be.closeTo(1.57, 0.01);
+    });
+
+    it('Should return correct average, when a string is passed', () => {
+
+        const numbers = [1, 2, 3, 4, 5, "9", "abc"];
+        let result = average(numbers);
+
+        expect(result).to.equal(4);
+    });
+
+    it('Should return undefined when wrong type of values are passed', () => {
+
+        const numbers = [true, false, NaN, null, undefined];
+        let result = average(numbers);
+
+        expect(result).to.be.undefined;
+    });
+
+    it('Should return 0 when empty string is passed', () => {
+
+        const numbers = [""];
+        let result = average(numbers);
+
+        expect(result).to.equal(0);
+    });
+
+    it('Should return undefined when empty array is passed', () => {
+
+        const numbers = [];
+        let result = average(numbers);
+
+        expect(result).to.be.undefined;
+    });
+
+    it('Should return undefined when non-array input is passed', () => {
+
+        let result = average('hello');
+        expect(result).to.be.undefined;
     });
 });
