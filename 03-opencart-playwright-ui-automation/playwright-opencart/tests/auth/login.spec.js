@@ -7,8 +7,8 @@ test.describe("OpenCart Admin Panel", () => {
 
         const loginPage = new LoginPage(page);
         await loginPage.goto();
-        await loginPage.login('', '');
-
+        await loginPage.login();
+        //Assert
         await expect(page.locator ('h1')).toContainText("Dashboard");
 });
     

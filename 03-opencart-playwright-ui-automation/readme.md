@@ -16,8 +16,9 @@ The framework simulates end-to-end product management workflows and focuses on m
 * Cross-browser execution (Chromium, Firefox, WebKit)
 * Product CRUD workflows (Create, Read, Update, Delete)
 * Dynamic test data generation
+* Test data abstraction through utility layer
 * Reusable utility functions (test data & cleanup)
-* `beforeEach` authentication setup for consistent test state
+* beforeEach authentication setup for consistent test state
 * Stable locator strategies for UI reliability
 
 ---
@@ -36,7 +37,9 @@ tests/
 
 utils/
 │   testData.js
-
+│   ├── generateProductName()  
+│   ├── generateSEOKeyword()
+│   └── deleteTestProduct()
 ```
 
 ---
@@ -109,8 +112,10 @@ npx playwright show-report
 
 * Page Object Model used for maintainability and separation of concerns
 * Test data abstraction implemented via utility layer
+* Page Objects contain UI interaction logic only
+* Dynamic product and SEO data generation separated from page actions
 * beforeEach hook ensures consistent authentication state
-* Randomized data generation to avoid test conflicts
+* Randomized data generation avoids test conflicts and duplicate records
 * Focus on stability over excessive test parallelism
 
 ---

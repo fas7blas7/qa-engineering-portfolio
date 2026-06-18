@@ -105,6 +105,7 @@ End-to-end UI automation framework built with Playwright and POM architecture.
 * Login automation
 * Product CRUD automation
 * Dynamic test data handling
+* Separation of test data into utility layer
 * Table filtering validation
 * Alert handling
 * Locator strategy optimization
@@ -113,7 +114,8 @@ End-to-end UI automation framework built with Playwright and POM architecture.
 ### Framework Design
 
 * Page Object Model (POM)
-* Reusable test structure
+* Clear separation of UI logic and test data generation
+* Reusable utility layer (test data & helper functions)
 * Modular test suites
 * CI-ready architecture
 
