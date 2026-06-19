@@ -29,16 +29,15 @@ class ProductPage{
         return productName;
     };
 
-    async editProduct(editedProduct) {
-
-        //  Reopen products
-        await this.page.click('[id="menu-dashboard"]');
-        await this.page.click('[id="menu-catalog"]');             
-        await this.page.click('text=Products');
+    async editProduct(productName, editedProduct) {
 
         //  Mark and Edit the product
-        await this.page.click('.form-check-input');
-        await this.page.click('[title="Edit"]');        
+        const row = this.page
+                            .locator('#form-product tbody tr')
+                            .filter({ hasText: productName });
+        
+        await row.locator('[title="Edit"]').click();
+                
         await this.page.fill('#input-name-1', editedProduct);
         await this.page.click('.btn.btn-primary');
 
@@ -58,7 +57,6 @@ class ProductPage{
         await this.page.click('text=Products');
         await this.page.fill('#input-name', productName);
         await this.page.click('#button-filter');
-
     };
 
     async deleteProduct(productName) {

@@ -29,15 +29,15 @@ test.describe('Product Management', () => {
   });
 
   test('Edit product', async ({ page }) => {
-
+    await page.pause();
     const productPage = new ProductPage(page);
     const productName = generateProductName();
     const seoKeyword = generateSEOKeyword();
-    await productPage.createProduct(productName, seoKeyword);   
-        
+    await productPage.createProduct(productName, seoKeyword);           
     
-    const editedProduct = generateEditedProduct(productName);
-    await productPage.editProduct(editedProduct);
+    const editedProduct = generateEditedProduct();
+    await productPage.searchProduct(productName);
+    await productPage.editProduct(productName, editedProduct);
     const alertMsg = page.locator('.alert-success');
     await expect(alertMsg).toBeVisible();
     console.log(`✅ Success Alert Appeared for ${editedProduct}`);
@@ -45,7 +45,7 @@ test.describe('Product Management', () => {
     await productPage.openProductsPage();
     //  Assert successful edit      
     await expect(page.locator('#form-product tbody tr').filter({hasText: editedProduct})).toContainText(editedProduct);     
-    await deleteTestProduct(productPage, editedProduct);
+    await productPage.deleteProduct(editedProduct);
   });
 
   test('Delete product', async ({ page }) => {

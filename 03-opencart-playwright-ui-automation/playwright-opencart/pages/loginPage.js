@@ -4,7 +4,7 @@ class LoginPage {
   }
 
   async goto() {
-    await this.page.goto('http://localhost/opencart/upload/adminqa/');
+    await this.page.goto('http://localhost/adminqa/');
   }
 
   async login(username, password) {
