@@ -29,7 +29,7 @@ test.describe('Product Management', () => {
   });
 
   test('Edit product', async ({ page }) => {
-    await page.pause();
+    
     const productPage = new ProductPage(page);
     const productName = generateProductName();
     const seoKeyword = generateSEOKeyword();

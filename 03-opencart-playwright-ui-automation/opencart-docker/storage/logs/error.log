@@ -1,0 +1,11 @@
+2026-06-20 15:10:53 - PHP Warning:  unlink(/var/www/storage/cache/cache.store.f4e59086bfd5322620dbd8df0fc3e3e6.1781971852): No such file or directory in /var/www/html/system/library/cache/file.php on line 79
+2026-06-20 15:11:38 - PHP Warning:  unlink(/var/www/storage/cache/cache.store.f4e59086bfd5322620dbd8df0fc3e3e6.1781971894): No such file or directory in /var/www/html/system/library/cache/file.php on line 79
+2026-06-20 18:21:43 - PHP Warning:  unlink(/var/www/storage/cache/cache.store.f4e59086bfd5322620dbd8df0fc3e3e6.1781983302): No such file or directory in /var/www/html/system/library/cache/file.php on line 79
+2026-06-20 18:21:47 - PHP Warning:  unlink(/var/www/storage/cache/cache.store.f4e59086bfd5322620dbd8df0fc3e3e6.1781983306): No such file or directory in /var/www/html/system/library/cache/file.php on line 79
+2026-06-20 18:22:16 - PHP Warning:  file_get_contents(/var/www/storage/cache/cache.store.f4e59086bfd5322620dbd8df0fc3e3e6.1781983335): Failed to open stream: No such file or directory in /var/www/html/system/library/cache/file.php on line 41
+2026-06-20 18:22:32 - PHP Warning:  unlink(/var/www/storage/cache/cache.store.f4e59086bfd5322620dbd8df0fc3e3e6.1781983349): No such file or directory in /var/www/html/system/library/cache/file.php on line 79
+2026-06-20 18:22:42 - PHP Warning:  unlink(/var/www/storage/cache/cache.store.f4e59086bfd5322620dbd8df0fc3e3e6.1781983362): No such file or directory in /var/www/html/system/library/cache/file.php on line 79
+2026-06-20 18:22:47 - PHP Warning:  unlink(/var/www/storage/cache/cache.store.f4e59086bfd5322620dbd8df0fc3e3e6.1781983366): No such file or directory in /var/www/html/system/library/cache/file.php on line 79
+2026-06-20 20:51:14 - PHP Warning:  unlink(/var/www/storage/cache/cache.store.f4e59086bfd5322620dbd8df0fc3e3e6.1781992273): No such file or directory in /var/www/html/system/library/cache/file.php on line 79
+2026-06-20 20:51:15 - PHP Warning:  unlink(/var/www/storage/cache/cache.store.f4e59086bfd5322620dbd8df0fc3e3e6.1781992275): No such file or directory in /var/www/html/system/library/cache/file.php on line 79
+2026-06-20 20:51:36 - PHP Warning:  file_get_contents(/var/www/storage/cache/cache.store.f4e59086bfd5322620dbd8df0fc3e3e6.1781992296): Failed to open stream: No such file or directory in /var/www/html/system/library/cache/file.php on line 41

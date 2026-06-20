@@ -76,7 +76,7 @@ class ProductPage{
                              .first()
                              .locator('input[type="checkbox"]');
 
-        await checkbox.click();
+        await checkbox.check();
 
         await this.page.on('dialog', async dialog => {
             console.log(dialog.message());
