@@ -4,10 +4,13 @@ class LoginPage {
   }
 
   async goto() {
-    await this.page.goto('http://127.0.0.1/adminqa/');
+    await this.page.goto('http://127.0.0.1/adminqa/', {
+       waitUntil: 'domcontentloaded' });
+
+    await this.page.waitForSelector('#input-username', { timeout: 20000 });
   }
 
-  async login(username, password) {
+  async login(username, password) {    
     await this.page.fill('#input-username', "admin");
     await this.page.fill('#input-password', "admin");
     await this.page.click('button[type="submit"]');

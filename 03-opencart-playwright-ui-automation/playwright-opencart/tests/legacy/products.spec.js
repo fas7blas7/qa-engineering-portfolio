@@ -7,7 +7,8 @@ const { test, expect } = require('@playwright/test');
 
   test('Add product successfully', async ({ page }) => {
 
-    await page.goto('http://127.0.0.1/adminqa');
+    await page.goto('http://127.0.0.1/adminqa', { waitUntil: 'domcontentloaded' });
+        await page.waitForSelector('#input-username', { timeout: 20000 });
 
     await page.fill('#input-username', 'admin');
     await page.fill('#input-password', 'admin');
@@ -47,7 +48,8 @@ const { test, expect } = require('@playwright/test');
 
   test('Edit product', async ({ page }) => {
 
-    await page.goto('http://127.0.0.1/adminqa');
+    await page.goto('http://127.0.0.1/adminqa', { waitUntil: 'domcontentloaded' });
+        await page.waitForSelector('#input-username', { timeout: 20000 });
     
     await page.fill('#input-username', 'admin');
     await page.fill('#input-password', 'admin');
@@ -84,7 +86,8 @@ const { test, expect } = require('@playwright/test');
 
   test('Delete product', async ({ page }) => {
 
-    await page.goto('http://127.0.0.1/adminqa');
+    await page.goto('http://127.0.0.1/adminqa', { waitUntil: 'domcontentloaded' });
+        await page.waitForSelector('#input-username', { timeout: 20000 });
 
     await page.fill('#input-username', 'admin');
     await page.fill('#input-password', 'admin');
