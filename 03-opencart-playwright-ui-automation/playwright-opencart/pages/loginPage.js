@@ -4,7 +4,7 @@ class LoginPage {
   }
 
   async goto() {
-    await this.page.goto('http://localhost/adminqa/');
+    await this.page.goto('http://127.0.0.1/adminqa/');
   }
 
   async login(username, password) {

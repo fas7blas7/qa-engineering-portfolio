@@ -32,10 +32,14 @@ jobs:
       - name: Wait for OpenCart
         run: |
           echo "Waiting for OpenCart..."
-          for i in {1..30}; do
-            curl -s http://localhost/adminqa && break
+          for i in {1..40}; do
+            curl -s http://127.0.0.1/adminqa && echo "ready" && exit 0
+            echo "not ready yet..."
             sleep 5
           done
+          echo "OpenCart failed to start"
+          docker compose logs
+          exit 1
 
       - name: Run Playwright tests
         working-directory: 03-opencart-playwright-ui-automation/playwright-opencart

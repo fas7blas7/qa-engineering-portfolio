@@ -5,7 +5,7 @@ test.describe("OpenCart Admin Panel", () => {
     test("successfull login with valid credentials", async ({ page }) => {
 
         // 1. Navigate to login page
-        await page.goto("http://localhost/adminqa");
+        await page.goto("http://127.0.0.1/adminqa");
 
         // 2. Fill in username
         await page.fill("#input-username", "admin");
@@ -30,7 +30,7 @@ test.describe("Invalid login", () => {
     test("Login fails with invalid credentials", async ({ page }) => {
         
         // 1. Navigate to login page
-        await page.goto("http://localhost/adminqa");
+        await page.goto("http://127.0.0.1/adminqa");
 
         // 2. Fill in username
         await page.fill("#input-username", "wrong-username");
@@ -47,7 +47,7 @@ test.describe("Invalid login", () => {
 
     test("Login fails with empty credentials", async ({ page }) => {
         // 1. Navigate to login page
-        await page.goto("http://localhost/adminqa");
+        await page.goto("http://127.0.0.1/adminqa");
 
         // 2. Fill in username
         await page.fill("#input-username", "");
