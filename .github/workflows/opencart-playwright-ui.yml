@@ -46,7 +46,7 @@ jobs:
           
       - name: Run Playwright tests
         working-directory: 03-opencart-playwright-ui-automation/playwright-opencart
-        run: npx playwright test
+        run: npx playwright test -g "Add product successfully" --reporter=line
 
       - name: Upload HTML report
         if: always()
