@@ -10,8 +10,6 @@ const { test, expect } = require('@playwright/test');
     await page.goto('http://127.0.0.1/adminqa', {
        waitUntil: 'domcontentloaded' });
 
-       await page.waitForLoadState('networkidle');
-
         await page.waitForSelector('#input-username', {
            timeout: 60000 });
 
@@ -56,8 +54,6 @@ const { test, expect } = require('@playwright/test');
     await page.goto('http://127.0.0.1/adminqa', {
        waitUntil: 'domcontentloaded' });
 
-       await page.waitForLoadState('networkidle');
-
         await page.waitForSelector('#input-username', {
            timeout: 60000 });
     
@@ -98,8 +94,6 @@ const { test, expect } = require('@playwright/test');
 
     await page.goto('http://127.0.0.1/adminqa', {
        waitUntil: 'domcontentloaded' });
-
-       await page.waitForLoadState('networkidle');
 
         await page.waitForSelector('#input-username', {
            timeout: 60000 });

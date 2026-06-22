@@ -1,6 +1,6 @@
 # 🚀 QA Engineering Portfolio (2026)
 
-[![API CI Pipeline](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/api-ci.yml/badge.svg)](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/api-ci.yml)
+[![API CI Pipeline](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/dummyjson-api-ci/badge.svg)](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/dummyjson-api-ci.yml)
 [![SwagLabs Selenium CI](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/swaglabs-ci.yml/badge.svg)](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/swaglabs-ci.yml)
 
 > CI pipelines automatically run API and UI automation tests on every push to `main`.

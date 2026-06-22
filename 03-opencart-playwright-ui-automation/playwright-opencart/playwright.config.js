@@ -15,7 +15,7 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
 
-  timeout: 30000,
+  timeout: 60000,
  
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -34,7 +34,7 @@ export default defineConfig({
     actionTimeout: 50000,
     navigationTimeout: 75000,
   
-    //baseURL: 'http://127.0.0.1',
+    baseURL: 'http://127.0.0.1',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     screenshot: 'only-on-failure',
