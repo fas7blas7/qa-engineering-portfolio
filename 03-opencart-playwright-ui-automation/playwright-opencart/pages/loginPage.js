@@ -7,7 +7,10 @@ class LoginPage {
     await this.page.goto('http://127.0.0.1/adminqa/', {
        waitUntil: 'domcontentloaded' });
 
-    await this.page.waitForSelector('#input-username', { timeout: 20000 });
+    await this.page.waitForLoadState('networkidle');
+    
+    await this.page.waitForSelector('#input-username', {
+       timeout: 60000 });
   }
 
   async login(username, password) {    

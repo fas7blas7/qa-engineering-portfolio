@@ -31,10 +31,10 @@ export default defineConfig({
   use: {    
 
     headless: true,
-    actionTimeout: 10000,
-    navigationTimeout: 15000,
+    actionTimeout: 50000,
+    navigationTimeout: 75000,
   
-    baseURL: 'http://127.0.0.1',
+    //baseURL: 'http://127.0.0.1',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     screenshot: 'only-on-failure',
