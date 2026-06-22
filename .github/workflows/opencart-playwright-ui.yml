@@ -38,19 +38,21 @@ jobs:
 
       - name: Wait for OpenCart
         run: |
-          echo "Waiting for login page..."
-          for i in {1..30}; do
-            STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1/adminqa)
-            echo "Attempt $i status: $STATUS"
-                 
-            if curl -s http://127.0.0.1/adminqa | grep -q "input-username"; then
-              echo "OpenCart is ready"
+          echo "Waiting for OpenCart"
+
+          for i in {1..40}; do
+            HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1/adminqa || true)
+
+            echo "Attempt $i -> HTTP $HTTP_CODE"
+
+            if [ "$HTTP_CODE" = "200" ] || [ "$HTTP_CODE" = "301" ] || [ "$HTTP_CODE" = "302" ]; then
+              echo "OpenCart is responding"
               exit 0
             fi
-                 
+
             sleep 3
           done
-                 
+
           echo "OpenCart failed to become ready"
           docker compose logs
           exit 1
