@@ -18,12 +18,15 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
+        working-directory: 03-opencart-playwright-ui-automation
         run: npm install
 
       - name: Install Playwright browsers
+        working-directory: 03-opencart-playwright-ui-automation
         run: npx playwright install --with-deps
 
       - name: Start OpenCart Docker stack
+        working-directory: 03-opencart-playwright-ui-automation/opencart-docker
         run: docker compose up -d
 
       - name: Wait for OpenCart
@@ -35,6 +38,7 @@ jobs:
           done
 
       - name: Run Playwright tests
+        working-directory: 03-opencart-playwright-ui-automation
         run: npx playwright test
 
       - name: Upload HTML report
