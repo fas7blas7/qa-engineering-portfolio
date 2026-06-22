@@ -5,14 +5,15 @@ define('APPLICATION', 'Admin');
 // HTTP
 define('HTTP_SERVER', 'http://localhost/adminqa/');
 define('HTTP_CATALOG', 'http://localhost/');
+
 // DIR
 define('DIR_OPENCART', '/var/www/html/');
 define('DIR_APPLICATION', DIR_OPENCART . 'adminqa/');
-define('DIR_SYSTEM', DIR_OPENCART . 'system/');
 define('DIR_EXTENSION', DIR_OPENCART . 'extension/');
 define('DIR_IMAGE', DIR_OPENCART . 'image/');
-define('DIR_STORAGE', '/var/www/storage/');
+define('DIR_SYSTEM', DIR_OPENCART . 'system/');
 define('DIR_CATALOG', DIR_OPENCART . 'catalog/');
+define('DIR_STORAGE', '/var/www/storage/');
 define('DIR_LANGUAGE', DIR_APPLICATION . 'language/');
 define('DIR_TEMPLATE', DIR_APPLICATION . 'view/template/');
 define('DIR_CONFIG', DIR_SYSTEM . 'config/');
@@ -28,8 +29,12 @@ define('DB_HOSTNAME', 'mysql');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', 'opencart');
 define('DB_DATABASE', 'opencart');
-define('DB_PREFIX', 'oc_');
 define('DB_PORT', '3306');
+define('DB_PREFIX', 'oc_');
+
+define('DB_SSL_KEY', '');
+define('DB_SSL_CERT', '');
+define('DB_SSL_CA', '');
 
 // OpenCart API
 define('OPENCART_SERVER', 'https://www.opencart.com/');
