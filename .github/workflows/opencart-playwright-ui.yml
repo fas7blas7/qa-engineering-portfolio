@@ -29,18 +29,21 @@ jobs:
         working-directory: 03-opencart-playwright-ui-automation/opencart-docker
         run: docker compose up -d
 
+      - name: Show Docker containers
+        run: docker ps -a
+
+      - name: Show Docker logs
+        working-directory: 03-opencart-playwright-ui-automation/opencart-docker
+        run: docker compose logs
+
       - name: Wait for OpenCart
         run: |
-          echo "Waiting for OpenCart..."
-          for i in {1..40}; do
-            curl -s http://127.0.0.1/adminqa && echo "ready" && exit 0
-            echo "not ready yet..."
+          for i in {1..10}; do
+            echo "Attempt $i"
+            curl -I http://127.0.0.1/adminqa || true
             sleep 5
           done
-          echo "OpenCart failed to start"
-          docker compose logs
-          exit 1
-
+          
       - name: Run Playwright tests
         working-directory: 03-opencart-playwright-ui-automation/playwright-opencart
         run: npx playwright test
