@@ -8,7 +8,7 @@ test.describe("OpenCart Admin Panel", () => {
         await page.goto('http://127.0.0.1/adminqa', {
              waitUntil: 'domcontentloaded' });
 
-             await this.page.waitForLoadState('networkidle');
+             await page.waitForLoadState('networkidle');
 
         await page.waitForSelector('#input-username', {
              timeout: 60000 });
@@ -39,7 +39,7 @@ test.describe("Invalid login", () => {
         await page.goto('http://127.0.0.1/adminqa', {
              waitUntil: 'domcontentloaded' });
 
-             await this.page.waitForLoadState('networkidle');
+             await page.waitForLoadState('networkidle');
 
         await page.waitForSelector('#input-username', {
              timeout: 60000 });
@@ -62,7 +62,7 @@ test.describe("Invalid login", () => {
         await page.goto('http://127.0.0.1/adminqa', {
              waitUntil: 'domcontentloaded' });
 
-        await this.page.waitForLoadState('networkidle');
+        await page.waitForLoadState('networkidle');
 
         await page.waitForSelector('#input-username', {
              timeout: 60000 });
