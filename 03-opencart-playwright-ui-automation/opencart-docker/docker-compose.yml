@@ -7,7 +7,7 @@ services:
       - "80:80"
     volumes:
       - ./upload:/var/www/html
-      - opencart_storage:/var/www/storage
+      - opencart_storage:/var/storage
     depends_on:
       - mysql
     environment:
