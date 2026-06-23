@@ -56,7 +56,21 @@ jobs:
           echo "OpenCart failed to become ready"
           docker compose logs
           exit 1
-          
+
+      - name: Debug OpenCart
+        run: |
+          echo "=== Docker containers ==="
+          docker ps
+
+          echo "=== OpenCart page ==="
+          curl -L http://127.0.0.1/adminqa/index.php?route=common/login | head -50
+
+          echo "=== OpenCart logs ==="
+          docker compose logs opencart
+
+          echo "=== MySQL logs ==="
+          docker compose logs mysql
+
       - name: Run Playwright tests
         working-directory: 03-opencart-playwright-ui-automation/playwright-opencart
         run: npx playwright test -g "Add product successfully" --reporter=line
