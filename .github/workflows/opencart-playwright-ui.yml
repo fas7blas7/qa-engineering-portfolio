@@ -57,6 +57,12 @@ jobs:
           docker compose logs
           exit 1
 
+      - name: Inspect storage
+        run: |
+          docker exec opencart ls -la /var/www/storage
+          docker exec opencart ls -la /var/www/storage/logs
+          docker exec opencart stat /var/www/storage/logs/error.log
+
       - name: Debug OpenCart
         run: |
           echo "=== Docker containers ==="
