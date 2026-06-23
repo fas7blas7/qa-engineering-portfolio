@@ -16,8 +16,37 @@ services:
       DB_PASSWORD: opencart
       DB_DATABASE: opencart
     command: >
-      bash -c "wait-for-it mysql:3306 -t 60 &&
-               apache2-foreground"
+      bash -c "
+        mkdir -p /var/www/storage/logs
+        mkdir -p /var/www/storage/cache
+        mkdir -p /var/www/storage/session
+        mkdir -p /var/www/storage/upload
+        mkdir -p /var/www/storage/download
+
+        touch /var/www/storage/logs/error.log
+
+        chmod -R 777 /var/www/storage
+
+        if [ ! -f /var/www/html/install.lock ]; then
+          wait-for-it mysql:3306 -t 60 &&
+          cp config-dist.php config.php &&
+          cp admin/config-dist.php admin/config.php &&
+          php /var/www/html/install/cli_install.php install \
+            --username admin \
+            --password admin \
+            --email email@example.com \
+            --http_server http://localhost/ \
+            --db_driver mysqli \
+            --db_hostname mysql \
+            --db_username root \
+            --db_password opencart \
+            --db_database opencart \
+            --db_port 3306 \
+            --db_prefix oc_;
+          touch /var/www/html/install.lock;
+        fi &&
+        apache2-foreground
+      "
 
   mysql:
     image: mysql:5.7
