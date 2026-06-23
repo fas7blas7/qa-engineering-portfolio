@@ -4,7 +4,7 @@ define('APPLICATION', 'Admin');
 
 // HTTP
 define('HTTP_SERVER', 'http://127.0.0.1/adminqa/');
-define('HTTP_CATALOG', 'http://127.0.0.1');
+define('HTTP_CATALOG', 'http://127.0.0.1/');
 
 // DIR
 define('DIR_OPENCART', '/var/www/html/');
