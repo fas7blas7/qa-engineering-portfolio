@@ -9,30 +9,31 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: ./03-opencart-playwright-ui-automation/playwright-opencart
+
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
       - name: Install dependencies
-        working-directory: ./playwright-opencart
         run: npm ci
 
-      - name: Install Playwright browsers
-        working-directory: ./playwright-opencart
+      - name: Install browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright tests
-        working-directory: ./playwright-opencart
+      - name: Run tests
         run: npx playwright test
 
-      - name: Upload HTML report
+      - name: Upload report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
-          path: playwright-opencart/playwright-report
+          path: playwright-report
