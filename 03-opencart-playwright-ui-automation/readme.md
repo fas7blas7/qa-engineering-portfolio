@@ -49,7 +49,6 @@ utils/
 * Playwright
 * JavaScript (Node.js)
 * Page Object Model (POM)
-* GitHub Actions (CI integration ready)
 
 ---
 
@@ -126,7 +125,6 @@ Test execution evidence is available in the main portfolio repository under the 
 
 * Playwright HTML reports
 * Test execution results
-* CI pipeline runs
 
 ---
 

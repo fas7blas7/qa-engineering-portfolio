@@ -1,10 +1,22 @@
-# 🚀 QA Engineering Portfolio (2026)
+# 🚀 Manual QA Engineer Portfolio (with API & UI Automation experience)
 
-[![Dummy Json API CI Pipeline](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/dummyjson-api-ci/badge.svg)](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/dummyjson-api-ci.yml)[![SwagLabs Selenium CI](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/swaglabs-ci.yml/badge.svg)](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/swaglabs-ci.yml)
+[![API CI Pipeline](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/dummyjson-api-ci.yml/badge.svg?branch=main)](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/dummyjson-api-ci.yml) [![SwagLabs Selenium CI](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/swaglabs-ci.yml/badge.svg)](https://github.com/fas7blas7/qa-engineering-portfolio/actions/workflows/swaglabs-ci.yml)
 
 > CI pipelines automatically run API and UI automation tests on every push to `main`.
 
 ---
+
+## 🎯 Primary Focus
+Manual QA Engineering:
+- Test design
+- Bug reporting
+- Exploratory testing
+- Test case creation
+
+## 🧪 Secondary Skills
+- API Testing (Postman/Newman)
+- UI Automation (Playwright, Selenium)
+- Basic CI/CD understanding
 
 # 📌 Overview
 
@@ -55,6 +67,33 @@ QA-2026-Comeback/
 
 ---
 
+## 🛠️ Technologies I Work With
+
+### 🧪 UI Automation
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)
+![Selenium WebDriver](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
+
+### 🔌 API Testing
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![Newman](https://img.shields.io/badge/Newman-000000?style=for-the-badge)
+![REST API](https://img.shields.io/badge/REST_API-02569B?style=for-the-badge)
+
+### ⚙️ CI/CD & DevOps
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+
+### 🧰 Programming & Tools
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+
+### 🗄️ Test / Mock Environments
+![JSON Server](https://img.shields.io/badge/JSON_Server-000000?style=for-the-badge)
+![OpenCart](https://img.shields.io/badge/OpenCart-1F5BFF?style=for-the-badge&logo=opencart&logoColor=white)
+
+---
+
 # 🧪 Projects
 
 ## 📦 01 — Manual QA | OpenCart Project
@@ -87,11 +126,7 @@ API automation framework using Postman, Newman, Docker, and CI execution.
 
 ### Tools
 
-* Postman
-* Newman
-* Docker
-* JSON Server
-* GitHub Actions
+* Postman * Newman * Docker * JSON Server * GitHub Actions
 
 ---
 
@@ -159,7 +194,7 @@ JavaScript fundamentals and unit testing practice project built with Mocha and C
 * Positive and negative test scenarios
 * Edge case validation
 
-**Implemented exercises:**
+**Implemented exercises**
 
 * Calculator operations (`add, subtract, multiply, divide`)
 * Reverse string (`reverseString`)
@@ -170,7 +205,7 @@ JavaScript fundamentals and unit testing practice project built with Mocha and C
 * Sum array values (`sumArray`)
 * Calculate average value (`average`)
 
-**Test coverage includes:**
+**Test coverage**
 
 * Empty arrays
 * Single-element arrays
@@ -183,7 +218,6 @@ JavaScript fundamentals and unit testing practice project built with Mocha and C
 
 ---
 
-
 # 🔄 CI/CD | GitHub Actions
 
 Automated QA pipelines using GitHub Actions.
@@ -195,28 +229,11 @@ Automated QA pipelines using GitHub Actions.
 * Generates HTML reports
 * Uploads artifacts
 
-## UI Pipeline (In Progress)
+## UI Pipeline (supporting)
 
 * Playwright CI execution
 * Cross-browser testing
 * Test report generation
-
----
-
-# 🛠 Tools & Technologies
-
-* OpenCart
-* Playwright
-* Selenium WebDriver
-* C#
-* NUnit
-* Postman
-* Newman
-* Docker
-* Git & GitHub
-* GitHub Actions
-* REST APIs
-* JSON Server
 
 ---
 
@@ -238,44 +255,30 @@ Automated QA pipelines using GitHub Actions.
 
 ---
 
-# 🎯 Current Focus
+# 🎯 Portfolio Focus
 
-* Expanding Playwright automation coverage
-* Improving CI/CD pipelines
-* Strengthening Selenium POM framework design
-* Enhancing reusable QA architecture
-* Building production-like QA workflows
+The goal of this portfolio is to demonstrate:
+
+- Real-world QA workflows
+- Strong manual QA fundamentals
+- Understanding of API and UI testing
+- Structured test design thinking
+- Ability to work in modern QA environments
+- Continuous learning and improvement
 
 ---
 
 # ⭐ Key Highlights
 
-- Built multi-project QA automation portfolio
-- Implemented Page Object Model (POM) architecture
-- Designed reusable test flows for UI automation
-- Integrated CI/CD pipelines using GitHub Actions
-- Built API testing framework with Docker + Newman
-- Developed scalable test structure across multiple technologies
+- Multi-project QA portfolio (Manual + API + UI)
+- Real-world e-commerce testing scenarios
+- Automation frameworks using POM
+- API testing with Docker-based execution
+- CI/CD integration using GitHub Actions
+- Scalable QA structure across technologies
 
 ---
 
-# 💡 What Makes This Project Stand Out
+# 📌 Closing Note
 
-**Unlike basic automation demos, this project simulates a real QA engineering environment with:**
-
-- Multiple independent QA projects in one repository
-- Separation of manual, API, and UI automation layers
-- CI/CD integration for automated validation
-- Real-world scalable framework design patterns
-
----
-
-# 📌 Portfolio Goal
-
-This repository demonstrates practical QA Engineering skills focused on:
-
-* real-world testing workflows
-* scalable automation frameworks
-* maintainable test architecture
-* CI/CD integration
-* continuous learning and improvement
+This portfolio reflects continuous learning and practical QA engineering experience across manual testing, API validation, and UI automation.
