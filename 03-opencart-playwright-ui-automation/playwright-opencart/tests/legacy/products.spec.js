@@ -7,7 +7,7 @@ const { test, expect } = require('@playwright/test');
 
   test('Add product successfully', async ({ page }) => {
 
-    await page.goto('http://127.0.0.1/adminqa/index.php?route=common/login', {
+    await page.goto('http://localhost:8080/admin/', {
        waitUntil: 'domcontentloaded' });
 
         await page.locator('#input-username').waitFor({ timeout: 60000 });
@@ -21,8 +21,8 @@ const { test, expect } = require('@playwright/test');
 
     await page.click('[class="btn btn-primary"]');
 
-    await page.fill('#input-name-1', createdProduct);
-    await page.fill('#input-meta-title-1', 'newprdct');
+    await page.fill('#input-name1', createdProduct);
+    await page.fill('#input-meta-title1', 'newprdct');
 
     await page.click('[href="#tab-data"]');
     await page.fill('#input-model', '101');
@@ -50,7 +50,7 @@ const { test, expect } = require('@playwright/test');
 
   test('Edit product', async ({ page }) => {
 
-    await page.goto('http://127.0.0.1/adminqa/index.php?route=common/login', {
+    await page.goto('http://localhost:8080/admin/', {
        waitUntil: 'domcontentloaded' });
 
         await page.locator('#input-username').waitFor({ timeout: 60000 });
@@ -62,7 +62,7 @@ const { test, expect } = require('@playwright/test');
     await page.click('#menu-catalog');
     await page.click('text=Products');
     
-    await page.fill('#input-name', createdProduct);
+    await page.fill('[name="filter_name"]', createdProduct);
     await page.click('#button-filter');
     
     const row = page.locator('#form-product tbody tr')
@@ -70,9 +70,9 @@ const { test, expect } = require('@playwright/test');
     
     await expect(row).toBeVisible();
     
-    await row.locator('[title="Edit"]').click();
+    await row.locator('[data-original-title="Edit"]').click();
     
-    await page.fill('#input-name-1', editedProduct);
+    await page.fill('#input-name1', editedProduct);
     await page.click('.btn.btn-primary');
     
     await expect(page.locator('.alert-success')).toBeVisible();
@@ -90,7 +90,7 @@ const { test, expect } = require('@playwright/test');
 
   test('Delete product', async ({ page }) => {
 
-    await page.goto('http://127.0.0.1/adminqa/index.php?route=common/login', {
+    await page.goto('http://localhost:8080/admin/', {
        waitUntil: 'domcontentloaded' });
 
         await page.locator('#input-username').waitFor({ timeout: 60000 });

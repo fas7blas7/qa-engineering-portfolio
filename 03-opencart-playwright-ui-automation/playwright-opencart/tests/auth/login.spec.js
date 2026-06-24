@@ -2,7 +2,7 @@ const { test, expect, } = require('@playwright/test');
 const { LoginPage } = require('../../pages/loginPage.js');
 
 test.describe("OpenCart Admin Panel", () => {
-
+    
     test('Login test', async ({ page }) => {
 
         const loginPage = new LoginPage(page);

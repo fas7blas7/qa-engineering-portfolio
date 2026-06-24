@@ -5,7 +5,7 @@ test.describe("OpenCart Admin Panel", () => {
     test("successfull login with valid credentials", async ({ page }) => {
 
         // 1. Navigate to login page
-        await page.goto('http://127.0.0.1/adminqa/index.php?route=common/login', {
+        await page.goto('http://localhost:8080/admin/', {
                waitUntil: 'domcontentloaded' });
 
         await page.locator('#input-username').waitFor({ timeout: 60000 });
@@ -33,13 +33,13 @@ test.describe("Invalid login", () => {
     test("Login fails with invalid credentials", async ({ page }) => {
         
         // 1. Navigate to login page
-        await page.goto('http://127.0.0.1/adminqa/index.php?route=common/login', {
+        await page.goto('http://localhost:8080/admin/', {
              waitUntil: 'domcontentloaded' });
 
         await page.locator('#input-username').waitFor({ timeout: 60000 });
 
         // 2. Fill in username
-        await page.fill("#input-username", "wrong-username");
+        await page.fill("#input-username", "admin");
 
         // 3. Fill in password
         await page.fill("#input-password", "wrong-password");
@@ -48,12 +48,12 @@ test.describe("Invalid login", () => {
         await page.click('button[type="submit"]');
 
         // 5. Assert error message
-        await expect(page.locator('.alert-danger')).toContainText("No match for Username and/or Password.");
+        await expect(page.locator('.alert.alert-danger.alert-dismissible')).toContainText("No match for Username and/or Password.");
     });
 
     test("Login fails with empty credentials", async ({ page }) => {
         // 1. Navigate to login page
-        await page.goto('http://127.0.0.1/adminqa/index.php?route=common/login', {
+        await page.goto('http://localhost:8080/admin/', {
              waitUntil: 'domcontentloaded' });
 
         await page.locator('#input-username').waitFor({ timeout: 60000 });

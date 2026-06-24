@@ -1,7 +1,8 @@
-name: Playwright Tests (OpenCart)
+name: Playwright Tests
 
 on:
   push:
+    branches: [main]
   pull_request:
 
 jobs:
@@ -9,81 +10,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 18
 
       - name: Install dependencies
-        working-directory: 03-opencart-playwright-ui-automation/playwright-opencart
-        run: npm install
+        working-directory: ./playwright-opencart
+        run: npm ci
 
       - name: Install Playwright browsers
-        working-directory: 03-opencart-playwright-ui-automation/playwright-opencart
+        working-directory: ./playwright-opencart
         run: npx playwright install --with-deps
 
-      - name: Start OpenCart Docker stack
-        working-directory: 03-opencart-playwright-ui-automation/opencart-docker
-        run: docker compose up -d
-
-      - name: Show Docker containers
-        run: docker ps -a
-
-      - name: Show Docker logs
-        working-directory: 03-opencart-playwright-ui-automation/opencart-docker
-        run: docker compose logs
-
-      - name: Wait for OpenCart
-        run: |
-          echo "Waiting for OpenCart"
-
-          for i in {1..40}; do
-            HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1/adminqa || true)
-
-            echo "Attempt $i -> HTTP $HTTP_CODE"
-
-            if [ "$HTTP_CODE" = "200" ] || [ "$HTTP_CODE" = "301" ] || [ "$HTTP_CODE" = "302" ]; then
-              echo "OpenCart is responding"
-              exit 0
-            fi
-
-            sleep 3
-          done
-
-          echo "OpenCart failed to become ready"
-          docker compose logs
-          exit 1
-
-      - name: Inspect storage
-        run: |
-          docker exec opencart ls -la /var/www/storage
-          docker exec opencart ls -la /var/www/storage/logs
-          docker exec opencart stat /var/www/storage/logs/error.log
-
-      - name: Debug OpenCart
-        run: |
-          echo "=== Docker containers ==="
-          docker ps
-
-          echo "=== OpenCart page ==="
-          curl -L http://127.0.0.1/adminqa/index.php?route=common/login | head -50
-
-          echo "=== OpenCart logs ==="
-          docker compose logs opencart
-
-          echo "=== MySQL logs ==="
-          docker compose logs mysql
-
       - name: Run Playwright tests
-        working-directory: 03-opencart-playwright-ui-automation/playwright-opencart
-        run: npx playwright test -g "Add product successfully" --reporter=line
+        working-directory: ./playwright-opencart
+        run: npx playwright test
 
       - name: Upload HTML report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
-          path: playwright-report
+          path: playwright-opencart/playwright-report

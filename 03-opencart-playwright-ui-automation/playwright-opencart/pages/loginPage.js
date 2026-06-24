@@ -4,7 +4,7 @@ class LoginPage {
   }
 
   async goto() {
-    await this.page.goto('http://127.0.0.1/adminqa/index.php?route=common/login/', {
+    await this.page.goto('http://localhost:8080/admin/', {
        waitUntil: 'domcontentloaded' });
    
        await this.page.locator('#input-username').waitFor({ timeout: 60000 });    
