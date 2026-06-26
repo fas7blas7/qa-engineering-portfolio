@@ -51,6 +51,28 @@ test.describe("Invalid login", () => {
         await expect(page.locator('.alert.alert-danger.alert-dismissible')).toContainText("No match for Username and/or Password.");
     });
 
+    test("Login fails when SQL Injection is passed", async ({ page }) => {
+        // 1. Navigate to login page
+        await page.goto('http://localhost:8080/admin/', {
+             waitUntil: 'domcontentloaded' });
+
+        await page.locator('#input-username').waitFor({ timeout: 60000 });
+
+        // 2. Fill in username
+        await page.fill("#input-username", "admin");
+
+        // 3. Fill in password
+        await page.fill("#input-password", "1' or '1'='1");
+
+        // 4. Click Login Button
+        await page.click('button[type="submit"]'); 
+        
+        const alertMsg = page.locator('[class="alert alert-danger alert-dismissible"]');
+        await expect(alertMsg).toBeVisible();
+        await expect(alertMsg).toContainText('No match for Username and/or Password.');
+        console.log("✅ Correct Alert Appeared");
+    });
+
     test("Login fails with empty credentials", async ({ page }) => {
         // 1. Navigate to login page
         await page.goto('http://localhost:8080/admin/', {
